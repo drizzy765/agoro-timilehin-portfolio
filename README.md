@@ -2,7 +2,7 @@
 
 Personal portfolio of **Agoro Oluwatimilehin (Timi)**, AI/ML Engineer in Lagos, Nigeria. It covers speech, LLM, retrieval and forecasting systems for emerging markets.
 
-**Live:** https://agoro-timilehin.agorotimilehin05.workers.dev _(placeholder until first deploy)_
+**Live:** https://agoro-timilehin.agorotimilehin05.workers.dev
 
 ## Features
 
