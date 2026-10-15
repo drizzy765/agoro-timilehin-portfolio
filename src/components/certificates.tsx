@@ -68,7 +68,7 @@ export function Certificates() {
     <div className="grid gap-4 lg:grid-cols-5">
       {/* Featured credential */}
       <Reveal className="lg:col-span-3">
-        <article className="glow-card relative h-full overflow-hidden rounded-3xl border border-line bg-surface p-6 sm:p-8">
+        <article className="glow-card shine relative h-full overflow-hidden rounded-3xl border border-line bg-surface p-6 sm:p-8">
           <div
             aria-hidden
             className="pointer-events-none absolute inset-0 opacity-60"
@@ -110,7 +110,7 @@ export function Certificates() {
       <div className="-mx-4 flex snap-x snap-mandatory gap-3 overflow-x-auto px-4 pb-2 no-scrollbar lg:col-span-2 lg:mx-0 lg:flex-col lg:overflow-visible lg:px-0 lg:pb-0">
         {rest.map((c, i) => (
           <Reveal key={c.title} delay={0.05 + i * 0.05} className="w-[82%] shrink-0 snap-start sm:w-[60%] lg:w-auto lg:flex-1">
-            <article className="group relative flex h-full flex-col gap-4 rounded-2xl border border-line bg-surface p-5 transition duration-300 hover:-translate-y-0.5 hover:border-lime/30">
+            <article className="shine group relative flex h-full flex-col gap-4 rounded-2xl border border-line bg-surface p-5 transition duration-300 hover:-translate-y-0.5 hover:border-lime/30">
               <span aria-hidden className="absolute top-5 bottom-5 left-0 w-[3px] rounded-r bg-lime/70" />
               <div className="flex items-start gap-3.5">
                 <IssuerMark issuer={c.issuer} />

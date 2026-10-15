@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { Magnetic } from "./magnetic";
 import { usePathname } from "next/navigation";
 import { motion } from "motion/react";
 import { useEffect, useState } from "react";
@@ -76,6 +77,7 @@ export function Nav() {
             })}
           </ul>
 
+          <Magnetic>
           <a
             href="#contact"
             className="inline-flex min-h-11 items-center gap-2 rounded-xl bg-lime px-4 text-sm font-medium text-on-accent transition hover:shadow-[0_0_24px_color-mix(in_srgb,var(--c-accent)_45%,transparent)] active:scale-[0.98]"
@@ -83,6 +85,7 @@ export function Nav() {
             <Mail className="size-4" />
             Contact
           </a>
+          </Magnetic>
         </nav>
       </header>
 

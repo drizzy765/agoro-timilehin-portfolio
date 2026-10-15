@@ -44,9 +44,15 @@ export function Timeline() {
       <ol className="space-y-6">
         {experience.map((e, i) => (
           <li key={e.org} className="relative flex gap-4 sm:gap-6">
-            <div className="relative z-10 pt-5">
+            <motion.div
+              className="relative z-10 pt-5"
+              initial={{ opacity: 0, scale: 0.6 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ type: "spring", stiffness: 420, damping: 22, delay: 0.05 + i * 0.06 }}
+            >
               <Logo src={e.logo} org={e.org} />
-            </div>
+            </motion.div>
             <Reveal delay={i * 0.05} className="min-w-0 flex-1">
               <article className="glow-card rounded-2xl border border-line bg-surface p-5 transition-colors hover:border-lime/30 sm:p-6">
                 <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">

@@ -273,3 +273,11 @@ export const hobbies = [
   { emoji: "💜", title: "Women in tech", body: "Advocate for women's empowerment and for more seats at the table, in tech and beyond." },
   { emoji: "📱", title: "Certified brainrot", body: "Occasional TikTok brainrot. Strictly for research purposes, obviously." },
 ];
+
+// Cover art: AniList CDN (via the public AniList API), stored locally in /public/anime. Links go to MyAnimeList.
+export const anime = [
+  { title: "Hunter x Hunter", sub: "2011 \u00b7 Madhouse \u00b7 148 eps", img: "/anime/hunter-x-hunter.webp", w: 460, h: 651, mal: "https://myanimelist.net/anime/11061", genres: ["Action", "Adventure", "Fantasy"] },
+  { title: "Berserk", sub: "1997 \u00b7 OLM \u00b7 25 eps", img: "/anime/berserk.webp", w: 460, h: 619, mal: "https://myanimelist.net/anime/33", genres: ["Action", "Adventure", "Drama"] },
+  { title: "Naruto", sub: "2002 \u00b7 Studio Pierrot \u00b7 220 eps", img: "/anime/naruto.webp", w: 460, h: 649, mal: "https://myanimelist.net/anime/20", genres: ["Action", "Adventure", "Comedy"] },
+  { title: "Black Clover", sub: "2017 \u00b7 Studio Pierrot \u00b7 170 eps", img: "/anime/black-clover.webp", w: 460, h: 650, mal: "https://myanimelist.net/anime/34572", genres: ["Action", "Adventure", "Comedy"] },
+];

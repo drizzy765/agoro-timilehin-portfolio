@@ -2,7 +2,7 @@
 
 Personal portfolio of **Agoro Oluwatimilehin (Timi)**, AI/ML Engineer in Lagos, Nigeria. It covers speech, LLM, retrieval and forecasting systems for emerging markets.
 
-**Live:** https://agoro-timilehin.agorotimilehin05.workers.dev
+**Live:** https://agoro-timilehin.agoro-timilehin.workers.dev
 
 ## Features
 
@@ -44,7 +44,7 @@ Other scripts:
 ```bash
 export CLOUDFLARE_API_TOKEN=...            # token with Workers Scripts:Edit
 export CLOUDFLARE_ACCOUNT_ID=...
-export NEXT_PUBLIC_SITE_URL=https://agoro-timilehin.agorotimilehin05.workers.dev   # inlined at build time
+export NEXT_PUBLIC_SITE_URL=https://agoro-timilehin.agoro-timilehin.workers.dev   # inlined at build time
 printf '%s' "$GROQ_API_KEY" | npx wrangler secret put GROQ_API_KEY
 npm run deploy
 ```

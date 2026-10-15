@@ -1,5 +1,5 @@
 import { chromium, devices } from "playwright";
-const BASE=process.env.BASE||"https://agoro-timilehin.agorotimilehin05.workers.dev", OUT="/workspace/portfolio/screens/live";
+const BASE=process.env.BASE||"https://agoro-timilehin.agoro-timilehin.workers.dev", OUT="/workspace/portfolio/screens/live";
 const b=await chromium.launch({ args:["--use-gl=angle","--use-angle=swiftshader","--enable-unsafe-swiftshader","--ignore-gpu-blocklist"] });
 const errs=[];
 async function warm(p){ const h=await p.evaluate(()=>document.body.scrollHeight); for(let y=0;y<h;y+=300){await p.evaluate(v=>scrollTo(0,v),y);await p.waitForTimeout(80);} await p.waitForTimeout(600);}

@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  // Cloudflare Workers (free plan). URL: https://agoro-timilehin.agorotimilehin05.workers.dev
+  // Cloudflare Workers (free plan). URL: https://agoro-timilehin.agoro-timilehin.workers.dev
   "name": "agoro-timilehin",
   "main": ".open-next/worker.js",
   "compatibility_date": "2026-10-01",

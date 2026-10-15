@@ -138,3 +138,4 @@ Excerpt: We aren’t just paying for data. We are paying for transparency failur
 - Plays football video games and chess; FC Barcelona fan.
 - Advocate of women's empowerment.
 - Admits to the occasional TikTok brainrot.
+- Favourite anime: Hunter x Hunter (2011), Berserk (1997), Naruto and Black Clover (shown with covers on the About page, linked to MyAnimeList).

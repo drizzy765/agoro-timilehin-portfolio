@@ -320,3 +320,41 @@
     transform: translate3d(-8%, 0, 0);
   }
 }
+
+/* ---- Motion extras (all transform/opacity; disabled for reduced motion) ---- */
+/* Gentle breathing ring on the "Ask about Timi" button */
+.fab-breathe {
+  animation: fab-breathe 3.2s ease-in-out infinite;
+}
+@keyframes fab-breathe {
+  0%, 100% { transform: scale(1); opacity: 0.55; }
+  50% { transform: scale(1.08); opacity: 0; }
+}
+/* Certificate cards: one diagonal shine sweep on hover */
+.shine {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.shine::after {
+  content: "";
+  position: absolute;
+  inset: -50% auto -50% -60%;
+  width: 40%;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.09), transparent);
+  transform: translateX(0) skewX(-12deg);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 3;
+}
+@media (hover: hover) {
+  .shine:hover::after {
+    opacity: 1;
+    transform: translateX(420%) skewX(-12deg);
+    transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.2s ease;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .fab-breathe { animation: none !important; opacity: 0; }
+  .shine::after { display: none; }
+}

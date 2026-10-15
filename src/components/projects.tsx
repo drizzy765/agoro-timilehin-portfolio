@@ -9,6 +9,7 @@ import { categories, projects, type CategoryKey, type Project } from "@/content/
 import { cn } from "@/lib/utils";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { ICONS, ProjectCover } from "./project-cover";
+import { StaggerItem, Tilt } from "./tilt";
 import { GitHubIcon } from "./brand-icons";
 
 const catLabel = Object.fromEntries(categories.map((c) => [c.key, c.label]));
@@ -97,6 +98,8 @@ export function Projects() {
                 transition={{ type: "spring", stiffness: 380, damping: 34 }}
                 className={span(i, featured.length)}
               >
+                <StaggerItem index={i} className="size-full">
+                <Tilt className="size-full">
                 <motion.button
                   layoutId={`card-${p.slug}`}
                   type="button"
@@ -144,6 +147,8 @@ export function Projects() {
                     </div>
                   </div>
                 </motion.button>
+                </Tilt>
+                </StaggerItem>
               </motion.li>
             );
           })}
@@ -302,10 +307,12 @@ function CompactGrid({ items, onOpen }: { items: Project[]; onOpen: (p: Project)
   return (
           <motion.ul layout className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
             <AnimatePresence mode="popLayout" initial={false}>
-              {items.map((p) => {
+              {items.map((p, idx) => {
                 const Icon = ICONS[p.icon] ?? ICONS.terminal;
                 return (
                   <motion.li key={p.slug} layout initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.96 }} transition={{ type: "spring", stiffness: 380, damping: 34 }}>
+                    <StaggerItem index={idx} className="size-full">
+                    <Tilt className="size-full" max={4}>
                     <motion.button
                       layoutId={`card-${p.slug}`}
                       type="button"
@@ -341,6 +348,8 @@ function CompactGrid({ items, onOpen }: { items: Project[]; onOpen: (p: Project)
                         ))}
                       </div>
                     </motion.button>
+                    </Tilt>
+                    </StaggerItem>
                   </motion.li>
                 );
               })}

@@ -48,6 +48,7 @@ export function ChatPanel() {
         aria-label="Ask about Timi"
         className="group fixed right-4 bottom-24 z-40 inline-flex min-h-12 min-w-12 items-center justify-center gap-2 rounded-full border border-magenta/40 bg-surface/90 p-2.5 sm:py-2.5 sm:pr-4 sm:pl-3 text-sm font-medium shadow-[0_0_0_1px_color-mix(in_srgb,var(--c-glow)_8%,transparent),0_0_32px_color-mix(in_srgb,var(--c-glow)_28%,transparent)] backdrop-blur-xl transition hover:shadow-[0_0_0_1px_color-mix(in_srgb,var(--c-glow)_20%,transparent),0_0_44px_color-mix(in_srgb,var(--c-glow)_45%,transparent)] active:scale-[0.97] sm:right-6 sm:bottom-6"
       >
+        <span aria-hidden className="fab-breathe pointer-events-none absolute inset-0 rounded-full border border-magenta/50" />
         <span className="relative grid size-7 place-items-center rounded-full bg-gradient-to-br from-magenta to-magenta/50 text-on-accent">
           <Sparkles className="size-4" />
           <span className="absolute inset-0 animate-ping rounded-full bg-magenta/30 motion-reduce:hidden [animation-duration:2.4s]" />

@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { hobbies, site } from "@/content/site";
+import { anime, hobbies, site } from "@/content/site";
+import { AnimeCard } from "@/components/anime-card";
 import { Reveal } from "@/components/reveal";
 import { LanyardCard } from "@/components/lanyard-card";
 import { SpotifyIcon } from "@/components/brand-icons";
 import { HobbyCard } from "@/components/hobby-card";
 
-export const metadata: Metadata = { title: "About", description: "The person behind the models: Timi's story, music, football and chess." };
+export const metadata: Metadata = { title: "About", description: "The person behind the models: Timi's story, music, football, chess and anime." };
 
 export default function AboutPage() {
   return (
@@ -55,10 +56,37 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <section className="mt-20" id="anime">
+        <Reveal>
+          <p className="font-mono text-xs tracking-wider text-subtle uppercase">
+            <span className="text-lime">02</span> Watchlist
+          </p>
+          <h2 className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">Favourite anime</h2>
+        </Reveal>
+        <div className="mt-8 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
+          {anime.map((a, i) => (
+            <Reveal key={a.title} delay={i * 0.06} className="h-full">
+              <AnimeCard a={a} />
+            </Reveal>
+          ))}
+        </div>
+        <p className="mt-4 font-mono text-[11px] text-subtle/80">
+          Cover art via{" "}
+          <a href="https://anilist.co" target="_blank" rel="noreferrer" className="underline decoration-line underline-offset-2 hover:text-foreground">
+            AniList
+          </a>{" "}
+          · links to{" "}
+          <a href="https://myanimelist.net" target="_blank" rel="noreferrer" className="underline decoration-line underline-offset-2 hover:text-foreground">
+            MyAnimeList
+          </a>
+          . Artwork © respective studios and publishers.
+        </p>
+      </section>
+
       <section className="mt-20">
         <Reveal>
           <p className="font-mono text-xs tracking-wider text-subtle uppercase">
-            <span className="text-lime">02</span> Soundtrack
+            <span className="text-lime">03</span> Soundtrack
           </p>
           <h2 className="mt-3 flex items-center gap-2 text-2xl font-semibold tracking-tight sm:text-3xl">
             <SpotifyIcon className="size-6 text-lime" /> On repeat
