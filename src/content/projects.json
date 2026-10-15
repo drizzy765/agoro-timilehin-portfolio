@@ -1,0 +1,1150 @@
+[
+  {
+    "slug": "sauticivic",
+    "title": "SautiCivic Bridge",
+    "tagline": "Voice-first civic grievance & legal-aid intake for code-switched Nigerian speech",
+    "description": "Voice-first civic-grievance and legal-aid intake for code-switched Nigerian Pidgin/English, with a 4-engine ASR benchmark and a two-tier abstain/clarify risk gate (Sahara CodeSwitch Africa Challenge 2026).",
+    "categories": [
+      "llm",
+      "rag"
+    ],
+    "role": "Team of 2 · Lead architect",
+    "roleDetail": "Team of 2 (with David Akhuabe). Lead architect, pipeline and benchmark research. Authored all 37 commits: gate/pipeline, ASR runners (Sahara, Whisper, Deepgram, Gemini), WER/oracle/polarity audits, React dashboard, Render/Cloudflare deploy, v20 report. Opened the project's 47 planning issues.",
+    "badges": [
+      "Speech AI",
+      "Responsible AI",
+      "Sahara CodeSwitch 2026"
+    ],
+    "year": "2026",
+    "featured": true,
+    "section": "top",
+    "status": null,
+    "date": "Sep 2026",
+    "lastUpdated": "2026-09-16",
+    "order": 0,
+    "image": "/projects/sauticivic.webp",
+    "icon": "mic",
+    "repo": "https://github.com/Spyder0000/Sauticivic",
+    "links": [
+      {
+        "label": "Live",
+        "url": "https://sauticivic.pages.dev/"
+      },
+      {
+        "label": "API docs",
+        "url": "https://sauticivic-api.onrender.com/docs"
+      }
+    ],
+    "stars": 1,
+    "stack": [
+      "Python",
+      "FastAPI",
+      "React 18",
+      "PostgreSQL",
+      "Docker",
+      "Sahara v2.5 ASR",
+      "Whisper large-v3",
+      "Deepgram Nova-3",
+      "Gemini",
+      "pytest (71 tests)",
+      "XeLaTeX",
+      "Render",
+      "Cloudflare Pages"
+    ],
+    "metrics": [
+      {
+        "label": "ASR engines benchmarked",
+        "value": "4"
+      },
+      {
+        "label": "Adversarial harm-avoidance",
+        "value": "10/10"
+      },
+      {
+        "label": "Automated tests",
+        "value": "71"
+      }
+    ],
+    "problem": "Citizens describe infrastructure and legal problems in Nigerian Pidgin mixed with English, Yoruba, Hausa or Igbo. Global speech models mis-hear these complaints, and a single wrong word can flip the meaning of a case.",
+    "approach": "Led architecture and benchmark research for a system that turns code-switched speech into structured municipal tickets and legal-aid intake briefs. A two-tier risk and abstention gate checks confidence, entity completeness, ambiguity and safety before anything happens downstream.",
+    "results": [
+      "Benchmarked four production ASR architectures across 120 recordings and surfaced systematic \"don\" to \"don't\" polarity inversions that WER hides",
+      "0/30 artifact-corruption failures and 10/10 adversarial harm-avoidance cases",
+      "Production stack with PostgreSQL audit logging, 71 automated tests, consent and pseudonymisation safeguards"
+    ],
+    "paper": [
+      "/papers/sauticivic-benchmark-report.pdf"
+    ]
+  },
+  {
+    "slug": "naija-smart-agent",
+    "title": "Naija Smart Agent",
+    "tagline": "Dual-agent recommender & review simulator in Pidgin, Yoruba, Hausa and Igbo",
+    "description": "Dual-agent system: a persona-driven review simulator and a FAISS + LLM-reranked recommender in 5 Nigerian language modes. NDCG@10 0.42, Hit@10 0.66, RMSE 0.71.",
+    "categories": [
+      "rag",
+      "llm"
+    ],
+    "role": "Team of 2 · Top contributor",
+    "roleDetail": "Team of 2 (with Toluwalase Ajiboye, @metrosmash). Top contributor (37 vs 30 commits). Built the FAISS retrieval pipeline, cold-start elicitation agent, LLM reranker, NDCG/ROUGE evaluation, multilingual Task B pipeline, Cerebras/Groq failover and the 3-tab web UI. Co-authored both papers.",
+    "badges": [
+      "DSN x BCT LLM Agent Challenge",
+      "RAG"
+    ],
+    "year": "2026",
+    "featured": true,
+    "section": "top",
+    "status": null,
+    "date": "May 2026",
+    "lastUpdated": "2026-05-25",
+    "order": 1,
+    "image": "/projects/naija-smart-agent.webp",
+    "icon": "bot",
+    "repo": "https://github.com/GeeksonCodes/dsn-bct-2026",
+    "links": [
+      {
+        "label": "Live",
+        "url": "https://geeksoncodes.github.io/dsn-bct-2026/"
+      }
+    ],
+    "stars": 2,
+    "stack": [
+      "Python",
+      "FAISS",
+      "Gemini 2.0 Flash",
+      "Groq Llama-3.3-70B",
+      "Cerebras DeepSeek",
+      "PyTorch",
+      "Transformers",
+      "scikit-learn",
+      "spaCy",
+      "NLTK",
+      "Docker",
+      "Hugging Face Spaces"
+    ],
+    "metrics": [
+      {
+        "label": "NDCG@10",
+        "value": "0.421"
+      },
+      {
+        "label": "Hit@10",
+        "value": "0.66"
+      },
+      {
+        "label": "BERTScore",
+        "value": "0.845"
+      }
+    ],
+    "problem": "Recommend the right products to Nigerian shoppers from a 112k-item catalogue and simulate realistic reviews, with cultural and multilingual context, not generic Western defaults.",
+    "approach": "A containerised dual-agent system: FAISS semantic retrieval blended with Bayesian popularity, LLM reranking, and RAG-conditioned review generation. An active-passive failover layer across Gemini and Groq tracks latency, rate limits and provider health with automatic key rotation.",
+    "results": [
+      "Retrieval ablations lifted NDCG@10 from 0.0808 to 0.4210, with Hit@10 0.66 on a 50/50 blend",
+      "Review simulation hit BERTScore 0.8447 and RMSE 0.7071",
+      "Nigerian-mode prompting improved ROUGE-1 and trait consistency"
+    ],
+    "paper": [
+      "/papers/dsn-bct-task_a_user_modelling.pdf",
+      "/papers/dsn-bct-task_b_personalized_recommendation.pdf"
+    ]
+  },
+  {
+    "slug": "gitcast",
+    "title": "Gitcast",
+    "tagline": "git diff → published post in under 60 seconds. Privacy-first, on PyPI",
+    "description": "Privacy-first CLI that captures a coding session (git diff plus local OCR with secret detection) and turns it into X/LinkedIn posts, PR descriptions and articles. Published on PyPI.",
+    "categories": [
+      "devtools",
+      "llm"
+    ],
+    "role": "Solo",
+    "roleDetail": "Solo. Includes the companion backend repo gitcast-api (FastAPI on Render with Supabase and a rate limiter). Opened 2 PRs on his own repo (contributing templates, dev branch).",
+    "badges": [
+      "Dev tool",
+      "PyPI"
+    ],
+    "year": "2026",
+    "featured": true,
+    "section": "top",
+    "status": null,
+    "date": "Aug 2026",
+    "lastUpdated": "2026-08-15",
+    "order": 2,
+    "image": null,
+    "icon": "terminal",
+    "repo": "https://github.com/drizzy765/gitcast",
+    "links": [
+      {
+        "label": "PyPI",
+        "url": "https://pypi.org/project/gitcast/"
+      }
+    ],
+    "stars": 6,
+    "stack": [
+      "Python",
+      "FastAPI",
+      "Tesseract OCR",
+      "mss",
+      "pynput",
+      "Groq",
+      "Gemini Vision",
+      "OpenRouter",
+      "DeepSeek",
+      "Supabase",
+      "Tweepy",
+      "Sentry",
+      "PostHog",
+      "Docker",
+      "Render",
+      "PyPI"
+    ],
+    "metrics": [
+      {
+        "label": "Formats per capture",
+        "value": "5"
+      },
+      {
+        "label": "Generation",
+        "value": "<8s"
+      }
+    ],
+    "problem": "Developers ship work every day but rarely write it up. PR descriptions and posts get skipped because context-switching is expensive.",
+    "approach": "A global hotkey captures the screen plus local git diff and project context. OCR runs on-device, secrets are detected and blocked automatically, captures are encrypted and cleaned up. Multi-provider LLM routing with BYOK generates PR descriptions, X/LinkedIn posts and long-form articles.",
+    "results": [
+      "Published on PyPI and works out of the box",
+      "Vision-model fallback when local OCR confidence is low",
+      "Sprint Mode synthesises multi-step development sessions into one write-up"
+    ],
+    "paper": []
+  },
+  {
+    "slug": "commodity-volatility",
+    "title": "Commodity Volatility Forecasting",
+    "tagline": "Regime-aware Elastic Net on PCA factors for maize, rice, PMS & diesel",
+    "description": "Regime-aware PCA + Elastic Net / Random Forest forecasts of realized volatility for maize, rice, PMS and diesel from FRED, FEWS NET and NBS macro data, with MLflow tracking and a live dashboard.",
+    "categories": [
+      "finance",
+      "data"
+    ],
+    "role": "Solo · B.Sc. thesis",
+    "roleDetail": "Solo (undergraduate thesis).",
+    "badges": [
+      "Thesis research",
+      "MLflow"
+    ],
+    "year": "2026",
+    "featured": true,
+    "section": "top",
+    "status": null,
+    "date": "Mar 2026",
+    "lastUpdated": "2026-03-14",
+    "order": 3,
+    "image": "/projects/commodity-volatility.webp",
+    "icon": "line-chart",
+    "repo": "https://github.com/drizzy765/Nigerian-Commodity-Price-Volatility-Forecasting",
+    "links": [
+      {
+        "label": "Live",
+        "url": "https://forecasting2.vercel.app/"
+      }
+    ],
+    "stars": 1,
+    "stack": [
+      "Python",
+      "pandas",
+      "scikit-learn",
+      "PCA",
+      "Elastic Net",
+      "Random Forest",
+      "MLflow",
+      "fredapi",
+      "Plotly",
+      "Vercel"
+    ],
+    "metrics": [
+      {
+        "label": "Commodities",
+        "value": "4"
+      },
+      {
+        "label": "Data sources",
+        "value": "FEWS NET · FRED · NBS"
+      }
+    ],
+    "problem": "Food and fuel price volatility hits Nigerian households hard, yet forecasts rarely combine domestic and global signals in a reproducible way.",
+    "approach": "End-to-end pipeline that merges FEWS NET, FRED, NBS and local data, engineers autoregressive features and principal-component factors, and compares Elastic Net with Random Forest. Every run is tracked in MLflow.",
+    "results": [
+      "Realised-volatility forecasts for maize, rice, PMS and diesel",
+      "Forms the basis of his B.Sc. thesis",
+      "Live macro risk dashboard with a 1-month forward forecast API"
+    ],
+    "paper": []
+  },
+  {
+    "slug": "agropulse",
+    "title": "AgroPulse NG",
+    "tagline": "Multi-model food-inflation forecaster on 12 years of Nigerian market data",
+    "description": "Nigerian food-inflation forecaster that selects ElasticNet, XGBoost or Prophet per commodity over 12 years of market data, with a FastAPI service and a Streamlit 'financial terminal'.",
+    "categories": [
+      "finance",
+      "data"
+    ],
+    "role": "Solo",
+    "roleDetail": "Solo.",
+    "badges": [
+      "Forecasting",
+      "Food security"
+    ],
+    "year": "2026",
+    "featured": true,
+    "section": "top",
+    "status": null,
+    "date": "Apr 2026",
+    "lastUpdated": "2026-04-06",
+    "order": 4,
+    "image": null,
+    "icon": "wheat",
+    "repo": "https://github.com/drizzy765/AgropulseNG",
+    "links": [],
+    "stars": 2,
+    "stack": [
+      "Python",
+      "ElasticNet",
+      "XGBoost",
+      "Prophet",
+      "FastAPI",
+      "Streamlit",
+      "Docker",
+      "Plotly"
+    ],
+    "metrics": [
+      {
+        "label": "Best R² (beans)",
+        "value": "0.94"
+      },
+      {
+        "label": "Years of data",
+        "value": "12"
+      }
+    ],
+    "problem": "Fuel and transport shocks ripple into staple food prices, but the relationship is noisy and the historical data is messy.",
+    "approach": "A cleaning pipeline that fixes historical unit errors with economic heuristics, then a multi-model engine that picks the best algorithm per commodity (ElasticNet, XGBoost, Prophet), served by a Dockerised FastAPI and a terminal-style Streamlit dashboard.",
+    "results": [
+      "R² 0.94 on predictable staples like beans",
+      "Fuel-shock simulator to explore future price paths"
+    ],
+    "paper": []
+  },
+  {
+    "slug": "lendraai",
+    "title": "LendraAI",
+    "tagline": "Explainable credit scoring & cash-flow forecasting for African SMEs",
+    "description": "AI financial layer for African SMEs: XGBoost + SHAP credit scoring, LSTM cash-flow forecasting, loan pre-approval and a Llama 3 advisor on Interswitch APIs (Interswitch x Enyata Buildathon 2025).",
+    "categories": [
+      "finance",
+      "rag"
+    ],
+    "role": "Team of 3 · ML engineer",
+    "roleDetail": "Team of 3. ML engineer: credit model (XGBoost + SHAP, 0.78 AUC on UCI) and the dark dashboard UI. Also did the Render/Vercel deploy fixes and wrote the upgrade plan. 20 of 22 commits; opened the 12 planning issues; authored PR #14 (dev/ml-credit).",
+    "badges": [
+      "Interswitch x Enyata Buildathon 2025",
+      "Fintech"
+    ],
+    "year": "2026",
+    "featured": true,
+    "section": "top",
+    "status": null,
+    "date": "Aug 2026",
+    "lastUpdated": "2026-08-11",
+    "order": 5,
+    "image": "/projects/lendraai.webp",
+    "icon": "landmark",
+    "repo": "https://github.com/GeeksonCrack/LendraAI",
+    "links": [
+      {
+        "label": "Live",
+        "url": "https://lendra-ai-theta.vercel.app"
+      },
+      {
+        "label": "API docs",
+        "url": "https://lendraai.onrender.com/docs"
+      }
+    ],
+    "stars": 0,
+    "stack": [
+      "Python",
+      "XGBoost",
+      "SHAP",
+      "TensorFlow (LSTM)",
+      "scikit-learn",
+      "FastAPI",
+      "React (Vite)",
+      "Tailwind CSS v4",
+      "Recharts",
+      "Groq Llama 3.1",
+      "Interswitch APIs",
+      "Render",
+      "Vercel"
+    ],
+    "metrics": [
+      {
+        "label": "Forecast horizon",
+        "value": "6 mo"
+      },
+      {
+        "label": "Team role",
+        "value": "ML Eng"
+      }
+    ],
+    "problem": "African SMEs are locked out of credit because they lack formal financial histories, even though their transaction data tells a clear story.",
+    "approach": "Timi built the XGBoost credit-scoring model with SHAP explanations and the interactive dashboard. Teammates built the LSTM cash-flow service and the Interswitch API layer.",
+    "results": [
+      "Real-time risk assessment with per-feature SHAP explanations",
+      "Instant loan pre-approval and a Groq-powered financial advisor on top of the scores"
+    ],
+    "paper": []
+  },
+  {
+    "slug": "dsn-mart-2026",
+    "title": "DSN Hackathon 2026: DSN Mart Sales Prediction",
+    "tagline": "Reproducible AutoGluon 'extreme' ensemble for retail sales regression, validated on 3 matched outer holdouts. Public RMSE 1072.9.",
+    "description": "Reproducible AutoGluon 'extreme' ensemble for retail sales regression, validated on 3 matched outer holdouts. Public RMSE 1072.9.",
+    "categories": [
+      "data"
+    ],
+    "role": "Solo",
+    "roleDetail": "Solo competition entry.",
+    "badges": [],
+    "year": "2026",
+    "featured": false,
+    "section": "more",
+    "status": null,
+    "date": "Sep 2026",
+    "lastUpdated": "2026-09-25",
+    "order": 100,
+    "image": null,
+    "icon": "shopping-cart",
+    "repo": "https://github.com/drizzy765/my-notebook",
+    "links": [],
+    "stars": 0,
+    "stack": [
+      "Python",
+      "AutoGluon",
+      "CatBoost",
+      "pandas",
+      "Google Colab"
+    ],
+    "metrics": [],
+    "problem": null,
+    "approach": null,
+    "results": [],
+    "paper": []
+  },
+  {
+    "slug": "flyrank-ctr",
+    "title": "FlyRank ML Internship: Expected-CTR Underperformance Study",
+    "tagline": "Internship ML track on anonymized Google Search Console data (data contracts, leakage traps, honest baselines), ending in a published write-up on predicting expected CTR to isolate content underperformance.",
+    "description": "Internship ML track on anonymized Google Search Console data (data contracts, leakage traps, honest baselines), ending in a published write-up on predicting expected CTR to isolate content underperformance.",
+    "categories": [
+      "data"
+    ],
+    "role": "Internship · Solo",
+    "roleDetail": "Solo internship work. 12 commits on his fork of the FlyRank starter (weeks 3–7), plus the write-up page at drizzy765.github.io and the flyrank_internship_ML-assigments repo.",
+    "badges": [],
+    "year": "2026",
+    "featured": false,
+    "section": "more",
+    "status": null,
+    "date": "Sep 2026",
+    "lastUpdated": "2026-09-21",
+    "order": 100,
+    "image": null,
+    "icon": "mouse-pointer",
+    "repo": "https://github.com/drizzy765/flyrank-ml-internship-starter",
+    "links": [
+      {
+        "label": "Write-up",
+        "url": "https://drizzy765.github.io/"
+      }
+    ],
+    "stars": 0,
+    "stack": [
+      "Python",
+      "pandas",
+      "scikit-learn",
+      "DuckDB",
+      "Hugging Face Hub",
+      "ReportLab",
+      "HTML/CSS"
+    ],
+    "metrics": [],
+    "problem": null,
+    "approach": null,
+    "results": [],
+    "paper": []
+  },
+  {
+    "slug": "market-regimes",
+    "title": "Forecasting Nigerian Market Regimes",
+    "tagline": "Classifies and forecasts NGX/macro market regimes using fractional differentiation, purged K-fold CV with embargo and XGBoost, with a Power BI dashboard.",
+    "description": "Classifies and forecasts NGX/macro market regimes using fractional differentiation, purged K-fold CV with embargo and XGBoost, with a Power BI dashboard.",
+    "categories": [
+      "finance",
+      "data"
+    ],
+    "role": "Solo",
+    "roleDetail": "Solo.",
+    "badges": [],
+    "year": "2026",
+    "featured": false,
+    "section": "more",
+    "status": null,
+    "date": "Sep 2026",
+    "lastUpdated": "2026-09-05",
+    "order": 100,
+    "image": null,
+    "icon": "activity",
+    "repo": "https://github.com/drizzy765/Forecasting-nigerian-market-regimes",
+    "links": [],
+    "stars": 0,
+    "stack": [
+      "Python",
+      "XGBoost",
+      "LightGBM",
+      "SHAP",
+      "statsmodels",
+      "fredapi",
+      "yfinance",
+      "Power BI"
+    ],
+    "metrics": [],
+    "problem": null,
+    "approach": null,
+    "results": [],
+    "paper": []
+  },
+  {
+    "slug": "outreach-agent",
+    "title": "Autonomous Outreach Engine",
+    "tagline": "Multi-agent lead discovery, audit, enrichment and pitching",
+    "description": "Multi-agent LangGraph pipeline for prospect discovery, Playwright technical audits, verified enrichment, tailored pitching and bounded negotiation, with Telegram alerts.",
+    "categories": [
+      "rag",
+      "devtools"
+    ],
+    "role": "Solo",
+    "roleDetail": "Solo.",
+    "badges": [
+      "LangGraph",
+      "Agents"
+    ],
+    "year": "2026",
+    "featured": false,
+    "section": "more",
+    "status": null,
+    "date": "Aug 2026",
+    "lastUpdated": "2026-08-27",
+    "order": 100,
+    "image": null,
+    "icon": "network",
+    "repo": "https://github.com/drizzy765/outreach-agent",
+    "links": [],
+    "stars": 0,
+    "stack": [
+      "Python",
+      "LangGraph",
+      "LangChain",
+      "OpenAI/Anthropic/Gemini",
+      "Playwright",
+      "BeautifulSoup",
+      "PostgreSQL",
+      "SQLAlchemy (async)",
+      "Docker",
+      "python-telegram-bot",
+      "Typer",
+      "pytest"
+    ],
+    "metrics": [
+      {
+        "label": "Agent stages",
+        "value": "6"
+      }
+    ],
+    "problem": "Finding good-fit clients and writing a useful first message is slow, manual work.",
+    "approach": "A six-stage LangGraph pipeline: prospect discovery, a Playwright technical-audit agent, deliverability-verified enrichment, a value-add pitcher, a bounded negotiation engine with human-in-the-loop override, and Telegram alerts.",
+    "results": [
+      "Bounded state machine keeps negotiation inside safe limits",
+      "Human override at every critical step"
+    ],
+    "paper": []
+  },
+  {
+    "slug": "amzn",
+    "title": "AMZN Stock Prediction: LSTM vs XGBoost",
+    "tagline": "Compares an enhanced PyTorch LSTM (with augmentation) against XGBoost on technical-indicator features, both tuned with Optuna.",
+    "description": "Compares an enhanced PyTorch LSTM (with augmentation) against XGBoost on technical-indicator features, both tuned with Optuna.",
+    "categories": [
+      "finance"
+    ],
+    "role": "Solo",
+    "roleDetail": "Solo.",
+    "badges": [],
+    "year": "2026",
+    "featured": false,
+    "section": "more",
+    "status": null,
+    "date": "Apr 2026",
+    "lastUpdated": "2026-04-03",
+    "order": 100,
+    "image": null,
+    "icon": "candlestick",
+    "repo": "https://github.com/drizzy765/AMZN-Stock-Prediction",
+    "links": [],
+    "stars": 0,
+    "stack": [
+      "Python",
+      "PyTorch",
+      "XGBoost",
+      "Optuna",
+      "ta",
+      "yfinance"
+    ],
+    "metrics": [],
+    "problem": null,
+    "approach": null,
+    "results": [],
+    "paper": []
+  },
+  {
+    "slug": "deeplense",
+    "title": "ML4SCI DeepLense",
+    "tagline": "CNN detection of dark-matter substructure in gravitational-lensing images",
+    "description": "CNN that detects dark-matter substructure in strong gravitational-lensing images (ML4SCI / GSoC-style task).",
+    "categories": [
+      "vision"
+    ],
+    "role": "Solo",
+    "roleDetail": "Solo.",
+    "badges": [
+      "Computer Vision",
+      "Astro-ML"
+    ],
+    "year": "2026",
+    "featured": false,
+    "section": "more",
+    "status": null,
+    "date": "Mar 2026",
+    "lastUpdated": "2026-03-30",
+    "order": 100,
+    "image": null,
+    "icon": "orbit",
+    "repo": "https://github.com/drizzy765/ML4SCI-DeepLense",
+    "links": [],
+    "stars": 0,
+    "stack": [
+      "Python",
+      "TensorFlow/Keras",
+      "CNN",
+      "scikit-learn",
+      "Pillow"
+    ],
+    "metrics": [],
+    "problem": "Spotting substructured dark-matter halos in strong-lensing images by eye doesn't scale.",
+    "approach": "A modernised CNN with log-scaled inputs, LeakyReLU for dark-sky regions, BatchNorm and global average pooling, plus a transfer-learning experiment with EfficientNetB0.",
+    "results": [
+      "Robust separation of smooth versus subhalo lensing profiles",
+      "Reproducible notebook with automatic data download"
+    ],
+    "paper": []
+  },
+  {
+    "slug": "rainfall",
+    "title": "Rainfall Prediction App",
+    "tagline": "Streamlit app that predicts rainfall likelihood from pressure, humidity, sunshine, wind, dew point and cloud cover.",
+    "description": "Streamlit app that predicts rainfall likelihood from pressure, humidity, sunshine, wind, dew point and cloud cover.",
+    "categories": [
+      "climate"
+    ],
+    "role": "Solo",
+    "roleDetail": "Solo.",
+    "badges": [],
+    "year": "2026",
+    "featured": false,
+    "section": "more",
+    "status": null,
+    "date": "Feb 2026",
+    "lastUpdated": "2026-02-28",
+    "order": 100,
+    "image": null,
+    "icon": "cloud-rain",
+    "repo": "https://github.com/drizzy765/rainfall-prediction",
+    "links": [],
+    "stars": 0,
+    "stack": [
+      "Python",
+      "scikit-learn",
+      "Streamlit",
+      "joblib"
+    ],
+    "metrics": [],
+    "problem": null,
+    "approach": null,
+    "results": [],
+    "paper": []
+  },
+  {
+    "slug": "greenpulse",
+    "title": "GreenPulseNG",
+    "tagline": "AI carbon-emission tracking and insights for Nigerian businesses",
+    "description": "AI carbon-emission tracking and insights for Nigerian businesses, with a Llama 3 analyst chat, Prophet forecasts and PDF reports.",
+    "categories": [
+      "climate",
+      "llm"
+    ],
+    "role": "Solo",
+    "roleDetail": "Solo. The project spans 3 repos: the GreenpulseNG monorepo, Greenpulsefrontend and Greenpulsebackend2.",
+    "badges": [
+      "Climate",
+      "Full-stack"
+    ],
+    "year": "2026",
+    "featured": false,
+    "section": "more",
+    "status": null,
+    "date": "Jan 2026",
+    "lastUpdated": "2026-01-16",
+    "order": 100,
+    "image": "/projects/greenpulse.webp",
+    "icon": "leaf",
+    "repo": "https://github.com/drizzy765/GreenpulseNG",
+    "links": [
+      {
+        "label": "Live",
+        "url": "https://greenpulse-ng.vercel.app/"
+      }
+    ],
+    "stars": 1,
+    "stack": [
+      "Python",
+      "FastAPI",
+      "Groq Llama 3",
+      "Prophet",
+      "ReportLab",
+      "SQLite",
+      "React (Vite)",
+      "Tailwind",
+      "MUI",
+      "Chart.js",
+      "Firebase Auth",
+      "Render",
+      "Vercel"
+    ],
+    "metrics": [],
+    "problem": "Nigerian SMEs have no simple way to measure, report and reduce their carbon footprint.",
+    "approach": "Decoupled FastAPI backend and React frontend with an emissions dashboard, an AI chat that explains the numbers, and generated PDF reports.",
+    "results": [
+      "Real-time emissions dashboard with AI-written insights",
+      "One-click PDF sustainability reports"
+    ],
+    "paper": []
+  },
+  {
+    "slug": "facemask",
+    "title": "Face Mask Detection with CNN",
+    "tagline": "Keras CNN that classifies whether a face in an uploaded image is masked, served through a Streamlit app.",
+    "description": "Keras CNN that classifies whether a face in an uploaded image is masked, served through a Streamlit app.",
+    "categories": [
+      "vision"
+    ],
+    "role": "Solo",
+    "roleDetail": "Solo.",
+    "badges": [],
+    "year": "2026",
+    "featured": false,
+    "section": "more",
+    "status": null,
+    "date": "Jan 2026",
+    "lastUpdated": "2026-01-08",
+    "order": 100,
+    "image": null,
+    "icon": "scan-face",
+    "repo": "https://github.com/drizzy765/facemask-detection-with-CNN",
+    "links": [],
+    "stars": 1,
+    "stack": [
+      "Python",
+      "TensorFlow/Keras",
+      "OpenCV",
+      "Streamlit"
+    ],
+    "metrics": [],
+    "problem": null,
+    "approach": null,
+    "results": [],
+    "paper": []
+  },
+  {
+    "slug": "breast-cancer",
+    "title": "Breast Cancer Classification (ML vs DL)",
+    "tagline": "Compares Random Forest and Decision Tree models with a feed-forward neural network on the WDBC dataset.",
+    "description": "Compares Random Forest and Decision Tree models with a feed-forward neural network on the WDBC dataset.",
+    "categories": [
+      "data"
+    ],
+    "role": "Solo",
+    "roleDetail": "Solo.",
+    "badges": [],
+    "year": "2025",
+    "featured": false,
+    "section": "more",
+    "status": null,
+    "date": "Dec 2025",
+    "lastUpdated": "2025-12-31",
+    "order": 100,
+    "image": null,
+    "icon": "heart-pulse",
+    "repo": "https://github.com/drizzy765/breast-cancer-classification-with-deep-learning",
+    "links": [],
+    "stars": 0,
+    "stack": [
+      "Python",
+      "TensorFlow",
+      "scikit-learn"
+    ],
+    "metrics": [],
+    "problem": null,
+    "approach": null,
+    "results": [],
+    "paper": []
+  },
+  {
+    "slug": "debtpulse",
+    "title": "DebtPulse Africa",
+    "tagline": "AI fiscal debt-risk scoring & forecasting with a USSD citizen-action layer",
+    "description": "Fiscal debt-risk scoring and 2025–2030 forecasting for 14 African countries, plus a USSD citizen debt-conversion concept (10Alytics Global Hackathon 2025).",
+    "categories": [
+      "finance",
+      "data"
+    ],
+    "role": "Solo",
+    "roleDetail": "Solo submission.",
+    "badges": [
+      "10Alytics Hackathon 2025"
+    ],
+    "year": "2025",
+    "featured": false,
+    "section": "more",
+    "status": null,
+    "date": "Nov 2025",
+    "lastUpdated": "2025-11-29",
+    "order": 100,
+    "image": null,
+    "icon": "globe",
+    "repo": "https://github.com/drizzy765/debt-pulse-africa",
+    "links": [],
+    "stars": 1,
+    "stack": [
+      "Python",
+      "pandas",
+      "Polynomial regression",
+      "Streamlit",
+      "Plotly"
+    ],
+    "metrics": [
+      {
+        "label": "Countries scored",
+        "value": "14"
+      },
+      {
+        "label": "Raw rows cleaned",
+        "value": "27k+"
+      }
+    ],
+    "problem": "Africa's debt crisis is hard to see: official fiscal data is fragmented and full of gaps.",
+    "approach": "Cleaned 27,000+ rows of fiscal data down to 622 reliable records, built risk scores and 2025–2030 projections, and an interactive dashboard that audits data transparency per country.",
+    "results": [
+      "Rescue scores and distress classification for 14 African countries",
+      "USSD concept for citizens to direct funds to verified education/climate projects"
+    ],
+    "paper": []
+  },
+  {
+    "slug": "dsn-carprice-2025",
+    "title": "DSN Hackathon 2025: Used Car Price Prediction",
+    "tagline": "LightGBM + CatBoost + XGBoost blend with Optuna weights and leakage-safe feature engineering. 8th on the private leaderboard.",
+    "description": "LightGBM + CatBoost + XGBoost blend with Optuna weights and leakage-safe feature engineering. 8th on the private leaderboard.",
+    "categories": [
+      "data",
+      "finance"
+    ],
+    "role": "Solo",
+    "roleDetail": "Solo competition entry.",
+    "badges": [],
+    "year": "2025",
+    "featured": false,
+    "section": "more",
+    "status": null,
+    "date": "Oct 2025",
+    "lastUpdated": "2025-10-04",
+    "order": 100,
+    "image": null,
+    "icon": "car",
+    "repo": "https://github.com/drizzy765/DSN_Hackathon_2025_CarPrice",
+    "links": [],
+    "stars": 1,
+    "stack": [
+      "Python",
+      "LightGBM",
+      "CatBoost",
+      "XGBoost",
+      "Optuna"
+    ],
+    "metrics": [],
+    "problem": null,
+    "approach": null,
+    "results": [],
+    "paper": []
+  },
+  {
+    "slug": "customer-seg",
+    "title": "Customer Segmentation Dashboard",
+    "tagline": "K-means customer clusters with an interactive Dash/Plotly dashboard covering spending, income, radar comparisons and channel behaviour.",
+    "description": "K-means customer clusters with an interactive Dash/Plotly dashboard covering spending, income, radar comparisons and channel behaviour.",
+    "categories": [
+      "data"
+    ],
+    "role": "Solo",
+    "roleDetail": "Solo.",
+    "badges": [],
+    "year": "2025",
+    "featured": false,
+    "section": "more",
+    "status": null,
+    "date": "Aug 2025",
+    "lastUpdated": "2025-08-03",
+    "order": 100,
+    "image": null,
+    "icon": "users",
+    "repo": "https://github.com/drizzy765/customer-segmentation-analysis",
+    "links": [
+      {
+        "label": "Live",
+        "url": "https://customer-segmentation-dashboard-vkmx.onrender.com"
+      }
+    ],
+    "stars": 2,
+    "stack": [
+      "Python",
+      "scikit-learn",
+      "K-Means",
+      "Dash",
+      "Plotly",
+      "Streamlit",
+      "Render"
+    ],
+    "metrics": [],
+    "problem": null,
+    "approach": null,
+    "results": [],
+    "paper": []
+  },
+  {
+    "slug": "youtube-agent",
+    "title": "YouTube Content Research AI Agent",
+    "tagline": "Pulls trending YouTube titles for a topic and uses Gemini to generate video ideas and find content gaps.",
+    "description": "Pulls trending YouTube titles for a topic and uses Gemini to generate video ideas and find content gaps.",
+    "categories": [
+      "rag",
+      "llm"
+    ],
+    "role": "Solo",
+    "roleDetail": "Solo.",
+    "badges": [],
+    "year": "2025",
+    "featured": false,
+    "section": "more",
+    "status": null,
+    "date": "Jul 2025",
+    "lastUpdated": "2025-07-06",
+    "order": 100,
+    "image": null,
+    "icon": "youtube",
+    "repo": "https://github.com/drizzy765/youtube-ai-agent",
+    "links": [],
+    "stars": 1,
+    "stack": [
+      "Python",
+      "Gemini API",
+      "Zenserp API"
+    ],
+    "metrics": [],
+    "problem": null,
+    "approach": null,
+    "results": [],
+    "paper": []
+  },
+  {
+    "slug": "aegis",
+    "title": "AEGIS Voice Guardian",
+    "tagline": "Voice anti-scam guardian for African digital banking: Sahara ASR/TTS detects authorized-push-payment scam pressure, scores it against a trust profile, soft-holds risky transfers and asks a spoken and visual confirmation (Deep Learning Indaba 2026 hackathon).",
+    "description": "Voice anti-scam guardian for African digital banking: Sahara ASR/TTS detects authorized-push-payment scam pressure, scores it against a trust profile, soft-holds risky transfers and asks a spoken and visual confirmation (Deep Learning Indaba 2026 hackathon).",
+    "categories": [
+      "llm",
+      "finance"
+    ],
+    "role": "Team of 4 · Team lead",
+    "roleDetail": "Team of 4, team lead. Owned the core agent loop: Sahara ASR/TTS integration, orchestrator, FastAPI routers, API contract, Whisper benchmark wiring and the submission docs/report. 18 of 24 commits; opened the 4 workstream issues.",
+    "badges": [],
+    "year": "2026",
+    "featured": false,
+    "section": "other",
+    "status": "In progress",
+    "date": "Aug 2026",
+    "lastUpdated": "2026-08-06",
+    "order": 200,
+    "image": null,
+    "icon": "shield",
+    "repo": "https://github.com/Spyder0000/aegis-voice-guardian",
+    "links": [
+      {
+        "label": "Demo video",
+        "url": "https://youtu.be/mCk_SKDc4n0"
+      }
+    ],
+    "stars": 0,
+    "stack": [
+      "Python",
+      "FastAPI",
+      "WebSockets",
+      "Sahara ASR/TTS",
+      "Whisper",
+      "XGBoost",
+      "PostgreSQL",
+      "Docker Compose",
+      "React",
+      "Hugging Face Datasets"
+    ],
+    "metrics": [],
+    "problem": null,
+    "approach": null,
+    "results": [],
+    "paper": []
+  },
+  {
+    "slug": "fraudviz",
+    "title": "FraudViz Lab",
+    "tagline": "Upload transaction CSVs and get fraudulent transactions flagged with Isolation Forest plus logistic-regression risk levels.",
+    "description": "Upload transaction CSVs and get fraudulent transactions flagged with Isolation Forest plus logistic-regression risk levels.",
+    "categories": [
+      "finance",
+      "data"
+    ],
+    "role": "Solo",
+    "roleDetail": "Solo.",
+    "badges": [],
+    "year": "2025",
+    "featured": false,
+    "section": "other",
+    "status": null,
+    "date": "Jul 2025",
+    "lastUpdated": "2025-07-22",
+    "order": 201,
+    "image": "/projects/fraudviz.webp",
+    "icon": "scan",
+    "repo": "https://github.com/drizzy765/fraud_analyzer_app",
+    "links": [
+      {
+        "label": "Live",
+        "url": "https://fraud-viz-lab.lovable.app/"
+      }
+    ],
+    "stars": 1,
+    "stack": [
+      "Python",
+      "Flask",
+      "scikit-learn",
+      "Isolation Forest",
+      "pdfplumber",
+      "MongoDB",
+      "Lovable",
+      "Render"
+    ],
+    "metrics": [],
+    "problem": null,
+    "approach": null,
+    "results": [],
+    "paper": []
+  },
+  {
+    "slug": "netflix",
+    "title": "Netflix EDA & Content Prediction",
+    "tagline": "EDA of the Netflix catalogue plus NLP genre prediction from descriptions, a hit predictor and a release-month predictor.",
+    "description": "EDA of the Netflix catalogue plus NLP genre prediction from descriptions, a hit predictor and a release-month predictor.",
+    "categories": [
+      "data",
+      "llm"
+    ],
+    "role": "Solo",
+    "roleDetail": "Solo.",
+    "badges": [],
+    "year": "2025",
+    "featured": false,
+    "section": "other",
+    "status": null,
+    "date": "Jun 2025",
+    "lastUpdated": "2025-06-30",
+    "order": 202,
+    "image": null,
+    "icon": "clapperboard",
+    "repo": "https://github.com/drizzy765/netflix-eda-and-prediction",
+    "links": [],
+    "stars": 0,
+    "stack": [
+      "Python",
+      "pandas",
+      "scikit-learn",
+      "TF-IDF"
+    ],
+    "metrics": [],
+    "problem": null,
+    "approach": null,
+    "results": [],
+    "paper": []
+  },
+  {
+    "slug": "fifa25",
+    "title": "FIFA 25 Player Analysis",
+    "tagline": "EDA, rating regression (R² ~0.85) and K-means/PCA clustering of FIFA 25 player attributes. Ties into his football hobby.",
+    "description": "EDA, rating regression (R² ~0.85) and K-means/PCA clustering of FIFA 25 player attributes. Ties into his football hobby.",
+    "categories": [
+      "data"
+    ],
+    "role": "Solo",
+    "roleDetail": "Solo.",
+    "badges": [],
+    "year": "2025",
+    "featured": false,
+    "section": "other",
+    "status": null,
+    "date": "Jul 2025",
+    "lastUpdated": "2025-07-14",
+    "order": 203,
+    "image": null,
+    "icon": "trophy",
+    "repo": "https://github.com/drizzy765/fifa25-player-analysis",
+    "links": [],
+    "stars": 1,
+    "stack": [
+      "Python",
+      "scikit-learn",
+      "K-Means",
+      "PCA",
+      "Seaborn"
+    ],
+    "metrics": [],
+    "problem": null,
+    "approach": null,
+    "results": [],
+    "paper": []
+  }
+]

@@ -1,0 +1,27 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  // Cloudflare Workers (free plan). URL: https://agoro-timilehin.agorotimilehin05.workers.dev
+  "name": "agoro-timilehin",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-10-01",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "workers_dev": true,
+  "preview_urls": false,
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "services": [
+    {
+      "binding": "WORKER_SELF_REFERENCE",
+      "service": "agoro-timilehin"
+    }
+  ],
+  "images": {
+    // next/image optimization via Cloudflare Images (free allowance)
+    "binding": "IMAGES"
+  },
+  // Secrets (not in this file): `npx wrangler secret put GROQ_API_KEY`
+  // NEXT_PUBLIC_SITE_URL is inlined at BUILD time: export it before `npm run deploy`.
+  "observability": { "enabled": true }
+}

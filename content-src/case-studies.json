@@ -1,0 +1,216 @@
+[
+  {
+    "slug": "sauticivic",
+    "title": "SautiCivic Bridge",
+    "tagline": "Voice-first civic grievance & legal-aid intake for code-switched Nigerian speech",
+    "categories": ["llm", "data"],
+    "badges": ["Speech AI", "Responsible AI", "Sahara CodeSwitch 2026"],
+    "year": "2026",
+    "featured": true,
+    "image": "/projects/sauticivic.webp",
+    "icon": "mic",
+    "repo": "https://github.com/Spyder0000/Sauticivic",
+    "live": "https://sauticivic.pages.dev/",
+    "stack": ["FastAPI", "PostgreSQL", "React", "Docker", "Speech AI"],
+    "metrics": [{"label": "ASR engines benchmarked", "value": "4"}, {"label": "Adversarial harm-avoidance", "value": "10/10"}, {"label": "Automated tests", "value": "71"}],
+    "problem": "Citizens describe infrastructure and legal problems in Nigerian Pidgin mixed with English, Yoruba, Hausa or Igbo. Global speech models mis-hear these complaints, and a single wrong word can flip the meaning of a case.",
+    "approach": "Led architecture and benchmark research for a system that turns code-switched speech into structured municipal tickets and legal-aid intake briefs. A two-tier risk and abstention gate checks confidence, entity completeness, ambiguity and safety before anything happens downstream.",
+    "results": [
+      "Benchmarked four production ASR architectures across 120 recordings and surfaced systematic \"don\" to \"don't\" polarity inversions that WER hides",
+      "0/30 artifact-corruption failures and 10/10 adversarial harm-avoidance cases",
+      "Production stack with PostgreSQL audit logging, 71 automated tests, consent and pseudonymisation safeguards"
+    ]
+  },
+  {
+    "slug": "naija-smart-agent",
+    "title": "Naija Smart Agent",
+    "tagline": "Dual-agent recommender & review simulator in Pidgin, Yoruba, Hausa and Igbo",
+    "categories": ["rag", "llm"],
+    "badges": ["DSN x BCT LLM Agent Challenge", "RAG"],
+    "year": "2026",
+    "featured": true,
+    "image": "/projects/naija-smart-agent.webp",
+    "icon": "bot",
+    "repo": "https://github.com/GeeksonCodes/dsn-bct-2026",
+    "live": "https://geeksoncodes.github.io/dsn-bct-2026/",
+    "stack": ["FastAPI", "Docker", "FAISS", "Gemini", "Groq"],
+    "metrics": [{"label": "NDCG@10", "value": "0.421"}, {"label": "Hit@10", "value": "0.66"}, {"label": "BERTScore", "value": "0.845"}],
+    "problem": "Recommend the right products to Nigerian shoppers from a 112k-item catalogue and simulate realistic reviews, with cultural and multilingual context, not generic Western defaults.",
+    "approach": "A containerised dual-agent system: FAISS semantic retrieval blended with Bayesian popularity, LLM reranking, and RAG-conditioned review generation. An active-passive failover layer across Gemini and Groq tracks latency, rate limits and provider health with automatic key rotation.",
+    "results": [
+      "Retrieval ablations lifted NDCG@10 from 0.0808 to 0.4210, with Hit@10 0.66 on a 50/50 blend",
+      "Review simulation hit BERTScore 0.8447 and RMSE 0.7071",
+      "Nigerian-mode prompting improved ROUGE-1 and trait consistency"
+    ]
+  },
+  {
+    "slug": "lendraai",
+    "title": "LendraAI",
+    "tagline": "Explainable credit scoring & cash-flow forecasting for African SMEs",
+    "categories": ["finance"],
+    "badges": ["Interswitch x Enyata Buildathon 2025", "Fintech"],
+    "year": "2025",
+    "featured": true,
+    "image": "/projects/lendraai.webp",
+    "icon": "landmark",
+    "repo": "https://github.com/GeeksonCrack/LendraAI",
+    "live": "https://lendra-ai-theta.vercel.app",
+    "stack": ["XGBoost", "SHAP", "TensorFlow LSTM", "FastAPI", "React"],
+    "metrics": [{"label": "Forecast horizon", "value": "6 mo"}, {"label": "Team role", "value": "ML Eng"}],
+    "problem": "African SMEs are locked out of credit because they lack formal financial histories, even though their transaction data tells a clear story.",
+    "approach": "Timi built the XGBoost credit-scoring model with SHAP explanations and the interactive dashboard. Teammates built the LSTM cash-flow service and the Interswitch API layer.",
+    "results": [
+      "Real-time risk assessment with per-feature SHAP explanations",
+      "Instant loan pre-approval and a Groq-powered financial advisor on top of the scores"
+    ]
+  },
+  {
+    "slug": "gitcast",
+    "title": "Gitcast",
+    "tagline": "git diff → published post in under 60 seconds. Privacy-first, on PyPI",
+    "categories": ["llm"],
+    "badges": ["Dev tool", "PyPI"],
+    "year": "2026",
+    "featured": true,
+    "image": null,
+    "icon": "terminal",
+    "repo": "https://github.com/drizzy765/gitcast",
+    "live": "https://pypi.org/project/gitcast/",
+    "stack": ["Python", "FastAPI", "Tesseract OCR", "Multi-provider LLMs"],
+    "metrics": [{"label": "Formats per capture", "value": "5"}, {"label": "Generation", "value": "<8s"}],
+    "problem": "Developers ship work every day but rarely write it up. PR descriptions and posts get skipped because context-switching is expensive.",
+    "approach": "A global hotkey captures the screen plus local git diff and project context. OCR runs on-device, secrets are detected and blocked automatically, captures are encrypted and cleaned up. Multi-provider LLM routing with BYOK generates PR descriptions, X/LinkedIn posts and long-form articles.",
+    "results": [
+      "Published on PyPI and works out of the box",
+      "Vision-model fallback when local OCR confidence is low",
+      "Sprint Mode synthesises multi-step development sessions into one write-up"
+    ]
+  },
+  {
+    "slug": "commodity-volatility",
+    "title": "Nigerian Commodity Volatility Forecasting",
+    "tagline": "Regime-aware Elastic Net on PCA factors for maize, rice, PMS & diesel",
+    "categories": ["finance", "data"],
+    "badges": ["Thesis research", "MLflow"],
+    "year": "2026",
+    "featured": false,
+    "image": "/projects/commodity-volatility.webp",
+    "icon": "line-chart",
+    "repo": "https://github.com/drizzy765/Nigerian-Commodity-Price-Volatility-Forecasting",
+    "live": "http://forecasting2.vercel.app/",
+    "stack": ["PCA", "Elastic Net", "Random Forest", "MLflow"],
+    "metrics": [{"label": "Commodities", "value": "4"}, {"label": "Data sources", "value": "FEWS NET · FRED · NBS"}],
+    "problem": "Food and fuel price volatility hits Nigerian households hard, yet forecasts rarely combine domestic and global signals in a reproducible way.",
+    "approach": "End-to-end pipeline that merges FEWS NET, FRED, NBS and local data, engineers autoregressive features and principal-component factors, and compares Elastic Net with Random Forest. Every run is tracked in MLflow.",
+    "results": [
+      "Realised-volatility forecasts for maize, rice, PMS and diesel",
+      "Forms the basis of his B.Sc. thesis",
+      "Live macro risk dashboard with a 1-month forward forecast API"
+    ]
+  },
+  {
+    "slug": "outreach-engine",
+    "title": "Autonomous Outreach Engine",
+    "tagline": "Multi-agent lead discovery, audit, enrichment and pitching",
+    "categories": ["rag"],
+    "badges": ["LangGraph", "Agents"],
+    "year": "2026",
+    "featured": false,
+    "image": null,
+    "icon": "network",
+    "repo": "https://github.com/drizzy765/outreach-agent",
+    "live": null,
+    "stack": ["LangGraph", "Playwright", "PostgreSQL"],
+    "metrics": [{"label": "Agent stages", "value": "6"}],
+    "problem": "Finding good-fit clients and writing a useful first message is slow, manual work.",
+    "approach": "A six-stage LangGraph pipeline: prospect discovery, a Playwright technical-audit agent, deliverability-verified enrichment, a value-add pitcher, a bounded negotiation engine with human-in-the-loop override, and Telegram alerts.",
+    "results": [
+      "Bounded state machine keeps negotiation inside safe limits",
+      "Human override at every critical step"
+    ]
+  },
+  {
+    "slug": "greenpulse",
+    "title": "GreenPulseNG",
+    "tagline": "AI carbon-emission tracking and insights for Nigerian businesses",
+    "categories": ["climate"],
+    "badges": ["Climate", "Full-stack"],
+    "year": "2025",
+    "featured": false,
+    "image": "/projects/greenpulse.webp",
+    "icon": "leaf",
+    "repo": "https://github.com/drizzy765/GreenpulseNG",
+    "live": "https://greenpulse-ng.vercel.app/",
+    "stack": ["FastAPI", "React", "Groq Llama 3", "Firebase"],
+    "metrics": [],
+    "problem": "Nigerian SMEs have no simple way to measure, report and reduce their carbon footprint.",
+    "approach": "Decoupled FastAPI backend and React frontend with an emissions dashboard, an AI chat that explains the numbers, and generated PDF reports.",
+    "results": [
+      "Real-time emissions dashboard with AI-written insights",
+      "One-click PDF sustainability reports"
+    ]
+  },
+  {
+    "slug": "agropulse",
+    "title": "AgroPulse NG",
+    "tagline": "Multi-model food-inflation forecaster on 12 years of Nigerian market data",
+    "categories": ["finance", "climate", "data"],
+    "badges": ["Forecasting", "Food security"],
+    "year": "2025",
+    "featured": false,
+    "image": null,
+    "icon": "wheat",
+    "repo": "https://github.com/drizzy765/AgropulseNG",
+    "live": null,
+    "stack": ["ElasticNet", "XGBoost", "Prophet", "FastAPI", "Streamlit"],
+    "metrics": [{"label": "Best R² (beans)", "value": "0.94"}, {"label": "Years of data", "value": "12"}],
+    "problem": "Fuel and transport shocks ripple into staple food prices, but the relationship is noisy and the historical data is messy.",
+    "approach": "A cleaning pipeline that fixes historical unit errors with economic heuristics, then a multi-model engine that picks the best algorithm per commodity (ElasticNet, XGBoost, Prophet), served by a Dockerised FastAPI and a terminal-style Streamlit dashboard.",
+    "results": [
+      "R² 0.94 on predictable staples like beans",
+      "Fuel-shock simulator to explore future price paths"
+    ]
+  },
+  {
+    "slug": "debtpulse",
+    "title": "DebtPulse Africa",
+    "tagline": "AI fiscal debt-risk scoring & forecasting with a USSD citizen-action layer",
+    "categories": ["finance", "data"],
+    "badges": ["10Alytics Hackathon 2025"],
+    "year": "2025",
+    "featured": false,
+    "image": null,
+    "icon": "globe",
+    "repo": "https://github.com/drizzy765/debt-pulse-africa",
+    "live": null,
+    "stack": ["Python", "Regression", "Dashboards"],
+    "metrics": [{"label": "Countries scored", "value": "14"}, {"label": "Raw rows cleaned", "value": "27k+"}],
+    "problem": "Africa's debt crisis is hard to see: official fiscal data is fragmented and full of gaps.",
+    "approach": "Cleaned 27,000+ rows of fiscal data down to 622 reliable records, built risk scores and 2025–2030 projections, and an interactive dashboard that audits data transparency per country.",
+    "results": [
+      "Rescue scores and distress classification for 14 African countries",
+      "USSD concept for citizens to direct funds to verified education/climate projects"
+    ]
+  },
+  {
+    "slug": "deeplense",
+    "title": "ML4SCI DeepLense",
+    "tagline": "CNN detection of dark-matter substructure in gravitational-lensing images",
+    "categories": ["vision"],
+    "badges": ["Computer Vision", "Astro-ML"],
+    "year": "2025",
+    "featured": false,
+    "image": null,
+    "icon": "orbit",
+    "repo": "https://github.com/drizzy765/ML4SCI-DeepLense",
+    "live": null,
+    "stack": ["TensorFlow", "CNN", "EfficientNetB0"],
+    "metrics": [],
+    "problem": "Spotting substructured dark-matter halos in strong-lensing images by eye doesn't scale.",
+    "approach": "A modernised CNN with log-scaled inputs, LeakyReLU for dark-sky regions, BatchNorm and global average pooling, plus a transfer-learning experiment with EfficientNetB0.",
+    "results": [
+      "Robust separation of smooth versus subhalo lensing profiles",
+      "Reproducible notebook with automatic data download"
+    ]
+  }
+]
