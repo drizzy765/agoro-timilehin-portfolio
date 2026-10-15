@@ -1,6 +1,6 @@
 import knowledge from "@/content/knowledge.generated";
 
-type Chunk = { title: string; text: string; core: boolean; tokens: Set<string> };
+type Chunk = { title: string; text: string; core: boolean; tokens: Set<string>; list?: string[]; lower?: string };
 
 const CORE = ["Tech index", "Profile", "Experience", "Education", "Skills", "Achievements", "Coding practice", "Outside work"];
 const STOP = new Set("the a an and or of to in on for with is are was what who how does did his he timi about tell me can you have has do it that this which".split(" "));
@@ -30,18 +30,18 @@ function chunk(md: string): Chunk[] {
   return chunks;
 }
 
-const CHUNKS = chunk(knowledge);
+const CHUNKS = chunk(knowledge).map((c) => ({ ...c, list: [...c.tokens], lower: c.title.toLowerCase() }));
 
 /** Tiny lexical retriever: always include core profile, plus top-k matching detail chunks. */
 export function retrieve(query: string, k = 4): string {
-  const q = tokenize(query);
+  const q = [...new Set(tokenize(query))];
   const scored = CHUNKS.filter((c) => !c.core)
     .map((c) => {
       let s = 0;
       for (const w of q) {
         if (c.tokens.has(w)) s += 2;
-        else if ([...c.tokens].some((t) => t.startsWith(w) || w.startsWith(t))) s += 0.5;
-        if (c.title.toLowerCase().includes(w)) s += 3;
+        else if (c.list!.some((t) => t.startsWith(w) || w.startsWith(t))) s += 0.5;
+        if (c.lower!.includes(w)) s += 3;
       }
       return { c, s };
     })

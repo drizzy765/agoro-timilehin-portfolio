@@ -5,21 +5,17 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "wrangler dev --port 3210",
     "lint": "eslint",
     "content": "node scripts/import-projects.mjs && node scripts/build-knowledge.mjs",
     "prebuild": "node scripts/build-knowledge.mjs",
-    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
-    "deploy": "NEXT_PUBLIC_SITE_URL=${NEXT_PUBLIC_SITE_URL:-https://drizzy.agoro-timilehin.workers.dev} opennextjs-cloudflare build && opennextjs-cloudflare deploy",
-    "upload": "NEXT_PUBLIC_SITE_URL=${NEXT_PUBLIC_SITE_URL:-https://drizzy.agoro-timilehin.workers.dev} opennextjs-cloudflare build && opennextjs-cloudflare upload",
-    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
-    "cf:build": "opennextjs-cloudflare build"
+    "preview": "NEXT_PUBLIC_SITE_URL=${NEXT_PUBLIC_SITE_URL:-https://drizzy.agoro-timilehin.workers.dev} next build && wrangler dev --port 3210",
+    "deploy": "NEXT_PUBLIC_SITE_URL=${NEXT_PUBLIC_SITE_URL:-https://drizzy.agoro-timilehin.workers.dev} next build && wrangler deploy",
+    "cf-typegen": "wrangler types"
   },
   "dependencies": {
-    "@ai-sdk/groq": "^4.0.61",
     "@ai-sdk/react": "^4.0.145",
     "@base-ui/react": "^1.9.0",
-    "@opennextjs/cloudflare": "^1.20.12",
     "@react-three/drei": "^10.7.9",
     "@react-three/fiber": "^9.8.2",
     "@react-three/postprocessing": "^3.2.0",

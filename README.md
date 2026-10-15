@@ -19,24 +19,25 @@ Personal portfolio of **Agoro Oluwatimilehin (Timi)**, AI/ML Engineer in Lagos, 
 
 ## Stack
 
-Next.js 16 (App Router) · React 19 · TypeScript · Tailwind CSS v4 · shadcn/ui (Base UI) · Motion · React Three Fiber / drei / postprocessing · react-activity-calendar · Vercel AI SDK + `@ai-sdk/groq` · simple-icons · lucide-react · deployed on **Cloudflare Workers** via [`@opennextjs/cloudflare`](https://opennext.js.org/cloudflare).
+Next.js 16 (App Router) · React 19 · TypeScript · Tailwind CSS v4 · shadcn/ui (Base UI) · Motion · React Three Fiber / drei / postprocessing · react-activity-calendar · AI SDK UI (`@ai-sdk/react`) · Groq · simple-icons · lucide-react · deployed on **Cloudflare Workers** (static export + Workers Static Assets, plus a ~30 KB worker for the chat API).
 
 ## Develop
 
 ```bash
 npm install
-cp .dev.vars.example .dev.vars        # for wrangler preview; add GROQ_API_KEY=... (gitignored)
-echo "GROQ_API_KEY=..." > .env.local  # for next dev / next start (gitignored)
-npm run dev                           # http://localhost:3000
+cp .dev.vars.example .dev.vars        # for wrangler dev/preview; add GROQ_API_KEY=... (gitignored)
+echo "GROQ_API_KEY=..." > .env.local  # for next dev (gitignored)
+npm run dev                           # http://localhost:3000 (chat via the dev-only route.api.ts)
 ```
 
 Other scripts:
 
 | Script | What it does |
 | --- | --- |
-| `npm run build` | `next build` (runs `scripts/build-knowledge.mjs` first to regenerate the chat knowledge base) |
-| `npm run preview` | OpenNext build + local Workers runtime preview (needs Node ≥ 22 for Wrangler) |
-| `npm run deploy` | OpenNext build + deploy to Cloudflare Workers |
+| `npm run build` | Static export to `out/` (runs `scripts/build-knowledge.mjs` first to regenerate the chat knowledge base) |
+| `npm start` | Serve `out/` + the chat worker locally with `wrangler dev` on :3210 (needs Node ≥ 22) |
+| `npm run preview` | Build, then `wrangler dev` |
+| `npm run deploy` | Build, then `wrangler deploy` |
 | `npm run content` | Re-import projects and rebuild the knowledge base |
 
 ## Deploy (Cloudflare Workers, free plan)
@@ -51,9 +52,10 @@ npm run deploy
 
 Optional env: `GROQ_MODEL` (defaults to `openai/gpt-oss-20b`).
 
-Notes:
-- Next.js `cacheComponents` is intentionally **off**: it hangs requests on the Workers runtime ([vercel/next.js#94880](https://github.com/vercel/next.js/issues/94880)). Home uses ISR (`revalidate = 3600`) instead.
-- No R2 incremental cache is configured (free tier, zero setup). Add `NEXT_INC_CACHE_R2_BUCKET` later for persistent ISR.
+How it fits the free plan (10 ms CPU per request):
+- Every page is prerendered at build time (`output: "export"`) and served by **Workers Static Assets**, so page and asset requests never execute worker code (no CPU billed).
+- Only `/api/*` runs `worker/index.ts` (`run_worker_first`). The chat handler (`src/server/chat.ts`) calls Groq's OpenAI-compatible API with `fetch` and re-emits the AI SDK UI-message SSE stream; no AI SDK/zod on the server, so CPU stays low while it waits on I/O.
+- GitHub / LeetCode / Deep-ML activity is fetched at **build time** (falls back to the snapshots in `src/data/`). Redeploy to refresh the numbers.
 
 ## License
 

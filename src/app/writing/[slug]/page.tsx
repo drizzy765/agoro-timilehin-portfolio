@@ -6,6 +6,8 @@ import { writing } from "@/content/site";
 
 const papers = writing.filter((w) => w.kind === "research");
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return papers.map((p) => ({ slug: p.slug }));
 }

@@ -11,7 +11,7 @@ import { SectionHeading } from "@/components/section-heading";
 import { getContributions } from "@/lib/contributions";
 
 // Static at build, refreshed hourly (ISR). Cache Components is off: it hangs on the Workers runtime.
-export const revalidate = 3600;
+export const dynamic = "force-static";
 
 async function ContributionsSection() {
   const sets = await getContributions();

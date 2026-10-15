@@ -1,27 +1,23 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   // Cloudflare Workers (free plan). URL: https://drizzy.agoro-timilehin.workers.dev
+  // Pages are a static Next.js export (out/) served by Workers Static Assets: no worker CPU per page.
+  // Only /api/* invokes worker/index.ts (the Groq chat, I/O-bound streaming).
   "name": "drizzy",
-  "main": ".open-next/worker.js",
+  "main": "worker/index.ts",
   "compatibility_date": "2026-10-01",
   "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
   "workers_dev": true,
+  "minify": true,
   "preview_urls": false,
   "assets": {
-    "directory": ".open-next/assets",
-    "binding": "ASSETS"
+    "directory": "out",
+    "binding": "ASSETS",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page",
+    "run_worker_first": ["/api/*"]
   },
-  "services": [
-    {
-      "binding": "WORKER_SELF_REFERENCE",
-      "service": "drizzy"
-    }
-  ],
-  "images": {
-    // next/image optimization via Cloudflare Images (free allowance)
-    "binding": "IMAGES"
-  },
-  // Secrets (not in this file): `npx wrangler secret put GROQ_API_KEY`
-  // NEXT_PUBLIC_SITE_URL is inlined at BUILD time: export it before `npm run deploy`.
+  // Secrets (not in this file): `printf '%s' "$GROQ_API_KEY" | npx wrangler secret put GROQ_API_KEY`
+  // NEXT_PUBLIC_SITE_URL is inlined at BUILD time (npm run deploy sets it).
   "observability": { "enabled": true }
 }
