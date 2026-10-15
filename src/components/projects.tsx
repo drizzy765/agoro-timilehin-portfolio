@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence, LayoutGroup, motion } from "motion/react";
 import { useEffect, useMemo, useState, type MouseEvent } from "react";
+import { createPortal } from "react-dom";
 import { ArrowUpRight, FileText, Star, Users, X } from "lucide-react";
 import { categories, projects, type CategoryKey, type Project } from "@/content/site";
 import { cn } from "@/lib/utils";
@@ -37,6 +38,8 @@ export function glow(e: MouseEvent<HTMLElement>) {
 
 export function Projects() {
   const [filter, setFilter] = useState<CategoryKey | "all">("all");
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
   const [open, setOpen] = useState<Project | null>(null);
   const list = useMemo(() => (filter === "all" ? projects : projects.filter((p) => p.categories.includes(filter))), [filter]);
   const featured = list.filter((p) => p.featured);
@@ -174,7 +177,8 @@ export function Projects() {
         </>
       )}
 
-      <AnimatePresence>{open && <CaseStudy project={open} onClose={() => setOpen(null)} />}</AnimatePresence>
+      {/* Portaled to <body> so no transformed/filtered ancestor can trap the fixed overlay. */}
+      {mounted && createPortal(<AnimatePresence>{open && <CaseStudy key={open.slug} project={open} onClose={() => setOpen(null)} />}</AnimatePresence>, document.body)}
     </LayoutGroup>
   );
 }
