@@ -20,7 +20,6 @@ export const metadata: Metadata = {
     type: "website",
   },
   twitter: { card: "summary", creator: "@timilovesml" },
-  icons: { icon: "/favicon.ico" },
 };
 
 export const viewport: Viewport = { themeColor: "#000000", colorScheme: "dark" };
