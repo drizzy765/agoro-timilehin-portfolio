@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 
 export function NumberTicker({ value, className, suffix = "" }: { value: number; className?: string; suffix?: string }) {
   const ref = useRef<HTMLSpanElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-40px" });
+  const inView = useInView(ref, { once: true, margin: "-40px 0px" });
   const reduce = useReducedMotion();
   const [n, setN] = useState(0);
   const prev = useRef(0);

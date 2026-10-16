@@ -48,7 +48,7 @@ export function Timeline() {
               className="relative z-10 pt-5"
               initial={{ opacity: 0, scale: 0.6 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, margin: "-80px" }}
+              viewport={{ once: true, margin: "-80px 0px" }}
               transition={{ type: "spring", stiffness: 420, damping: 22, delay: 0.05 + i * 0.06 }}
             >
               <Logo src={e.logo} org={e.org} />
