@@ -16,7 +16,7 @@ export const site = {
   x: "https://x.com/timilovesml",
   xHandle: "@timilovesml",
   medium: "https://medium.com/@agorotimilehin05",
-  spotifyEmbed: "https://open.spotify.com/embed/playlist/45Bf4Ilpl2qLMENMtLNaiM?utm_source=generator&theme=0",
+  spotifyEmbed: "https://open.spotify.com/embed/playlist/2OW9QUHQgwkYGj2bKKjHpH?theme=0",
   /**
    * Discord user ID for the Lanyard "now playing" card.
    * Requires joining https://discord.gg/lanyard once (otherwise Lanyard returns

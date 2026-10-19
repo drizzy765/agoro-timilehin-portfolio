@@ -1,5 +1,5 @@
 # Knowledge about Timi (Agoro Oluwatimilehin Teslim)
-Generated 2026-10-16 from his CV, project READMEs, papers and Medium posts.
+Generated 2026-10-19 from his CV, project READMEs, papers and Medium posts.
 
 ## Profile
 - Name: Agoro Oluwatimilehin Teslim, goes by "Timi". Based in Lagos, Nigeria.
@@ -134,7 +134,7 @@ Excerpt: We aren’t just paying for data. We are paying for transparency failur
 - GitHub: ~629 contributions in the last year.
 
 ## Outside work
-- Big music fan (Drake especially); shares a Spotify playlist on the About page.
+- Big music fan (Drake especially); shares his Spotify playlist ("Drizzy playlist", https://open.spotify.com/playlist/2OW9QUHQgwkYGj2bKKjHpH) on the About page.
 - Plays football video games and chess; FC Barcelona fan.
 - Advocate of women's empowerment.
 - Admits to the occasional TikTok brainrot.
