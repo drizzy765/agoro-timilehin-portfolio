@@ -1,10 +1,10 @@
 import Image from "next/image";
+import type { CSSProperties } from "react";
 import { ArrowDown, MapPin, Sparkles } from "lucide-react";
 import { site } from "@/content/site";
 import { DecryptedText } from "./decrypted-text";
 import { HeroSphere } from "./hero-sphere";
 import { OpenChatButton } from "./open-chat-button";
-import { Reveal } from "./reveal";
 import { GitHubIcon, LinkedInIcon, MediumIcon, XIcon } from "./brand-icons";
 
 export function Hero() {
@@ -14,7 +14,7 @@ export function Hero() {
       <div aria-hidden className="pointer-events-none absolute -top-40 left-1/2 h-[520px] w-[min(820px,100vw)] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,color-mix(in_srgb,var(--c-accent)_7%,transparent),transparent)]" />
 
       <div className="relative z-10">
-        <Reveal>
+        <div className="hero-in">
           <div className="flex items-center gap-4">
             <div className="relative">
               <div aria-hidden className="absolute -inset-1 rounded-[22px] bg-gradient-to-br from-lime/50 via-transparent to-cyan/40 opacity-70 blur-[6px]" />
@@ -41,7 +41,7 @@ export function Hero() {
               </p>
             </div>
           </div>
-        </Reveal>
+        </div>
 
         <p className="mt-8 font-mono text-sm text-cyan">
           <span className="text-subtle">&gt;</span> <DecryptedText text="hello, i'm timi" delay={150} />
@@ -50,14 +50,14 @@ export function Hero() {
         <h1 className="mt-3 text-[2.6rem] leading-[1.02] font-semibold tracking-tight text-balance sm:text-6xl lg:text-[4.2rem]">
           <DecryptedText text={site.name} delay={450} speed={32} />
         </h1>
-        <Reveal delay={0.25}>
+        <div className="hero-in" style={{ "--d": "0.25s" } as CSSProperties}>
           <p className="mt-4 font-mono text-base text-foreground/90 sm:text-lg">
             {site.role} <span className="text-lime">·</span> {site.location}
           </p>
           <p className="mt-4 max-w-xl text-base leading-relaxed text-subtle sm:text-lg">{site.intro}</p>
-        </Reveal>
+        </div>
 
-        <Reveal delay={0.4}>
+        <div className="hero-in" style={{ "--d": "0.4s" } as CSSProperties}>
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <a
               href="#projects"
@@ -83,7 +83,7 @@ export function Hero() {
               </a>
             ))}
           </div>
-        </Reveal>
+        </div>
       </div>
 
       <div className="relative mx-auto w-full max-w-[300px] sm:max-w-[420px] lg:max-w-[540px]">
