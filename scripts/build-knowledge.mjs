@@ -37,7 +37,7 @@ Generated ${new Date().toISOString().slice(0, 10)} from his CV, project READMEs,
 - Name: Agoro Oluwatimilehin Teslim, goes by "Timi". Based in Lagos, Nigeria.
 - Role: Machine Learning Engineer focused on speech & LLM systems, retrieval/recommendation, forecasting, responsible AI, data & digital products.
 - Interests: applying AI to public-sector, development, financial and emerging-market problems, with attention to reliability, inclusion, measurable evaluation and safe deployment.
-- Contact: email agorotimilehin05@gmail.com · GitHub github.com/drizzy765 · LinkedIn linkedin.com/in/agoro-oluwatimilehin-aba2851aa · X @timilovesml · Medium medium.com/@agorotimilehin05
+- Contact: email agorotimilehin05@gmail.com · GitHub github.com/drizzy765 · LinkedIn linkedin.com/in/agoro-oluwatimilehin-aba2851aa · X @timilovesml1234 (x.com/timilovesml1234) · Medium medium.com/@agorotimilehin05
 
 ## Experience
 - Flyrank AI, AI/ML Engineering Intern (Remote), Jul 2026–Oct 2026 (completed; Timi is no longer at Flyrank): built and optimised Python ML and LLM workflow components (feature integration, data contracts, prompt design, testing, pipeline reliability); production-oriented AI engineering with maintainable APIs and reproducibility.

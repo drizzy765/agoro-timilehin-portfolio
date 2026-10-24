@@ -13,8 +13,8 @@ export const site = {
   githubUser: "drizzy765",
   leetcodeUser: "drizzy765",
   linkedin: "https://www.linkedin.com/in/agoro-oluwatimilehin-aba2851aa/",
-  x: "https://x.com/timilovesml",
-  xHandle: "@timilovesml",
+  x: "https://x.com/timilovesml1234",
+  xHandle: "@timilovesml1234",
   medium: "https://medium.com/@agorotimilehin05",
   spotifyEmbed: "https://open.spotify.com/embed/playlist/2OW9QUHQgwkYGj2bKKjHpH?theme=0",
   /**

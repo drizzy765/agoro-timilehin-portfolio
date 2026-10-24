@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     images: ["/img/timi-square.jpg"],
     type: "website",
   },
-  twitter: { card: "summary", creator: "@timilovesml" },
+  twitter: { card: "summary", creator: "@timilovesml1234" },
 };
 
 export const viewport: Viewport = { themeColor: "#000000", colorScheme: "dark" };
