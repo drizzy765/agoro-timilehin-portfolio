@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     description: "Speech, LLM and forecasting systems for emerging markets.",
     images: ["/img/timi-square.jpg"],
     type: "website",
+    url: process.env.NEXT_PUBLIC_SITE_URL ? process.env.NEXT_PUBLIC_SITE_URL + "/" : undefined,
   },
   twitter: { card: "summary", creator: "@timilovesml1234" },
 };

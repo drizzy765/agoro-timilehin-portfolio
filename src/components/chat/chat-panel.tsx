@@ -23,7 +23,7 @@ export function ChatPanel() {
   // Create the chat client lazily (first open) so nothing random runs at prerender.
   const openChat = useCallback((next = true) => {
     setOpen(next);
-    if (next) setChat((c) => c ?? new Chat<UIMessage>({ id: "ask-timi", transport: new DefaultChatTransport({ api: "/api/chat" }) }));
+    if (next) setChat((c) => c ?? new Chat<UIMessage>({ id: "ask-timi", transport: new DefaultChatTransport({ api: process.env.NEXT_PUBLIC_CHAT_API || "/api/chat" }) }));
   }, []);
 
   useEffect(() => {
