@@ -8,6 +8,8 @@ import { ChatPanel } from "@/components/chat/chat-panel";
 import { MotionProvider } from "@/components/motion-provider";
 
 
+const OG_IMAGE = `${process.env.NEXT_PUBLIC_SITE_URL ?? ""}/og.png`;
+
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
   title: { default: "Agoro Oluwatimilehin (Timi) · ML Engineer, Lagos", template: "%s · Timi Agoro" },
@@ -16,11 +18,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Agoro Oluwatimilehin (Timi) · ML Engineer",
     description: "Speech, LLM and forecasting systems for emerging markets.",
-    images: ["/img/timi-square.jpg"],
+    images: [{ url: OG_IMAGE, width: 1200, height: 627, alt: "Agoro Oluwatimilehin · AI/ML Engineer" }],
     type: "website",
     url: process.env.NEXT_PUBLIC_SITE_URL ? process.env.NEXT_PUBLIC_SITE_URL + "/" : undefined,
   },
-  twitter: { card: "summary", creator: "@timilovesml1234" },
+  twitter: { card: "summary_large_image", creator: "@timilovesml1234", images: [OG_IMAGE] },
 };
 
 export const viewport: Viewport = { themeColor: "#000000", colorScheme: "dark" };
