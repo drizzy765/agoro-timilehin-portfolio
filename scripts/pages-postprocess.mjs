@@ -2,7 +2,8 @@
 // string paths in content don't get basePath automatically) and add .nojekyll.
 import fs from "node:fs"; import path from "node:path";
 const bp = process.env.PAGES_BASE_PATH; if (!bp) process.exit(0);
-const re = /(["'(=]|https:\/\/drizzy765\.github\.io)\/(img|anime|logos|papers)\//g;
+const dirs = fs.readdirSync("public", { withFileTypes: true }).filter((d) => d.isDirectory()).map((d) => d.name).join("|");
+const re = new RegExp(`(["'(=]|https://drizzy765\\.github\\.io)/(${dirs})/`, "g");
 let n = 0;
 (function walk(d) { for (const f of fs.readdirSync(d)) { const p = path.join(d, f);
   if (fs.statSync(p).isDirectory()) walk(p);
