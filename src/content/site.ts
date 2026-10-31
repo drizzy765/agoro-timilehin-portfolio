@@ -123,6 +123,8 @@ export const education = {
 };
 
 export const awards = [
+  { title: "Sahara CodeSwitch Africa 2026", detail: "Winner · Legal & Public Services and SMT categories (SautiCivic Bridge)", stat: "Winner" },
+  { title: "DSN Qualification Hackathon 2026", detail: "5th of 307 teams, ML Track", stat: "Top 2%" },
   { title: "DSN AI Bootcamp 2025", detail: "Final 223 of 30,000+ applicants", stat: "Top 0.8%" },
   { title: "DSN Hackathon 2025", detail: "8th of 169 teams", stat: "Top 5%" },
 ];

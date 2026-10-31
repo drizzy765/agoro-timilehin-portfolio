@@ -3,7 +3,7 @@
     "slug": "sauticivic",
     "title": "SautiCivic Bridge",
     "tagline": "Voice-first civic grievance & legal-aid intake for code-switched Nigerian speech",
-    "description": "Voice-first civic-grievance and legal-aid intake for code-switched Nigerian Pidgin/English, with a 4-engine ASR benchmark and a two-tier abstain/clarify risk gate (Sahara CodeSwitch Africa Challenge 2026).",
+    "description": "Voice-first civic-grievance and legal-aid intake for code-switched Nigerian Pidgin/English, with a 4-engine ASR benchmark and a two-tier abstain/clarify risk gate. Winner, Sahara CodeSwitch Africa Challenge 2026 (Legal & Public Services and SMT).",
     "categories": [
       "llm",
       "rag"
