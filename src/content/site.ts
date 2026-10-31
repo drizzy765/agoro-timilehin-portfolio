@@ -123,7 +123,7 @@ export const education = {
 };
 
 export const awards = [
-  { title: "Sahara CodeSwitch Africa 2026", detail: "1st Place · Agric, Education & Govt Services ($1,750) · SautiCivic Bridge", stat: "1st" },
+  { title: "Sahara CodeSwitch Africa 2026", detail: "1st Place · Agric, Education & Govt Services · SautiCivic Bridge", stat: "1st" },
   { title: "DSN Qualification Hackathon 2026", detail: "5th of 307 teams, ML Track", stat: "Top 2%" },
   { title: "DSN AI Bootcamp 2025", detail: "Final 223 of 30,000+ applicants", stat: "Top 0.8%" },
   { title: "DSN Hackathon 2025", detail: "8th of 169 teams", stat: "Top 5%" },

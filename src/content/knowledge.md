@@ -23,7 +23,7 @@ Generated 2026-10-31 from his CV, project READMEs, papers and Medium posts.
 - Analytics: Power BI, Excel, data cleaning, EDA, dashboards, technical documentation, benchmarking, LaTeX.
 
 ## Achievements & certifications
-- Sahara CodeSwitch Africa Challenge 2026 (Intron Voice AI): 1st PLACE in the Agric, Education & Govt Services category ($1,750 prize) with SautiCivic Bridge, Legal & Govt Services use case (team Spider Eng, 2 people with David Akhuabe).
+- Sahara CodeSwitch Africa Challenge 2026 (Intron Voice AI): 1st PLACE in the Agric, Education & Govt Services category with SautiCivic Bridge, Legal & Govt Services use case (team Spider Eng, 2 people with David Akhuabe).
 - DSN Bootcamp Qualification Hackathon 2026 (ML Track): 5th of 307 teams, solo.
 - DSN AI Bootcamp 2025: selected among the final 223 of 30,000+ applicants (~top 0.8%).
 - DSN Hackathon 2025: 8th of 169 teams (top 5%).
@@ -31,7 +31,7 @@ Generated 2026-10-31 from his CV, project READMEs, papers and Medium posts.
 
 ## Projects
 ### SautiCivic Bridge (2026, featured)
-Voice-first civic-grievance and legal-aid intake for code-switched Nigerian Pidgin/English, with a 4-engine ASR benchmark and a two-tier abstain/clarify risk gate. 1st Place, Sahara CodeSwitch Africa 2026, Agric, Education & Govt Services category ($1,750). Role: Team of 2 (with David Akhuabe). Lead architect, pipeline and benchmark research. Authored all 37 commits: gate/pipeline, ASR runners (Sahara, Whisper, Deepgram, Gemini), WER/oracle/polarity audits, React dashboard, Render/Cloudflare deploy, v20 report. Opened the project's 47 planning issues. Stack: Python, FastAPI, React 18, PostgreSQL, Docker, Sahara v2.5 ASR, Whisper large-v3, Deepgram Nova-3, Gemini, pytest (71 tests). Repo: https://github.com/Spyder0000/Sauticivic · Live: https://sauticivic.pages.dev/ · API docs: https://sauticivic-api.onrender.com/docs
+Voice-first civic-grievance and legal-aid intake for code-switched Nigerian Pidgin/English, with a 4-engine ASR benchmark and a two-tier abstain/clarify risk gate. 1st Place, Sahara CodeSwitch Africa 2026, Agric, Education & Govt Services category. Role: Team of 2 (with David Akhuabe). Lead architect, pipeline and benchmark research. Authored all 37 commits: gate/pipeline, ASR runners (Sahara, Whisper, Deepgram, Gemini), WER/oracle/polarity audits, React dashboard, Render/Cloudflare deploy, v20 report. Opened the project's 47 planning issues. Stack: Python, FastAPI, React 18, PostgreSQL, Docker, Sahara v2.5 ASR, Whisper large-v3, Deepgram Nova-3, Gemini, pytest (71 tests). Repo: https://github.com/Spyder0000/Sauticivic · Live: https://sauticivic.pages.dev/ · API docs: https://sauticivic-api.onrender.com/docs
 Problem: Citizens describe infrastructure and legal problems in Nigerian Pidgin mixed with English, Yoruba, Hausa or Igbo. Global speech models mis-hear these complaints, and a single wrong word can flip the meaning of a case.
 Approach: Led architecture and benchmark research for a system that turns code-switched speech into structured municipal tickets and legal-aid intake briefs. A two-tier risk and abstention gate checks confidence, entity completeness, ambiguity and safety before anything happens downstream.
 Results: Benchmarked four production ASR architectures across 120 recordings and surfaced systematic "don" to "don't" polarity inversions that WER hides; 0/30 artifact-corruption failures and 10/10 adversarial harm-avoidance cases; Production stack with PostgreSQL audit logging, 71 automated tests, consent and pseudonymisation safeguards.
