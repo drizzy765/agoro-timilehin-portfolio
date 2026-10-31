@@ -55,7 +55,7 @@ Generated ${new Date().toISOString().slice(0, 10)} from his CV, project READMEs,
 - Analytics: Power BI, Excel, data cleaning, EDA, dashboards, technical documentation, benchmarking, LaTeX.
 
 ## Achievements & certifications
-- Sahara CodeSwitch Africa Challenge 2026 (Intron Voice AI): WINNER of the Legal & Public Services track and the SMT category, with SautiCivic Bridge (team of 2 with David Akhuabe).
+- Sahara CodeSwitch Africa Challenge 2026 (Intron Voice AI): 1st PLACE in the Agric, Education & Govt Services category ($1,750 prize) with SautiCivic Bridge, Legal & Govt Services use case (team Spider Eng, 2 people with David Akhuabe).
 - DSN Bootcamp Qualification Hackathon 2026 (ML Track): 5th of 307 teams, solo.
 - DSN AI Bootcamp 2025: selected among the final 223 of 30,000+ applicants (~top 0.8%).
 - DSN Hackathon 2025: 8th of 169 teams (top 5%).
