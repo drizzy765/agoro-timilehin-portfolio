@@ -2,7 +2,7 @@
 // (no worker CPU). Only /api/* runs this code (see run_worker_first in wrangler.jsonc).
 import { handleChat } from "../src/server/chat";
 
-const ALLOWED = ["https://drizzy765.github.io"];
+const ALLOWED = ["https://drizzy765.github.io", "https://timis.tech", "https://www.timis.tech", "https://drizzy.agoro-timilehin.workers.dev"];
 
 interface Env {
   ASSETS: { fetch: (req: Request) => Promise<Response> };

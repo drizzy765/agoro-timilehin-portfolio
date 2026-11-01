@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  // Cloudflare Workers (free plan). URL: https://drizzy.agoro-timilehin.workers.dev
+  // Cloudflare Workers (free plan). URL: https://timis.tech (also https://drizzy.agoro-timilehin.workers.dev)
   // Pages are a static Next.js export (out/) served by Workers Static Assets: no worker CPU per page.
   // Only /api/* invokes worker/index.ts (the Groq chat, I/O-bound streaming).
   "name": "drizzy",
