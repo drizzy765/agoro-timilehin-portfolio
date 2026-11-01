@@ -12,7 +12,11 @@ interface Env {
 
 export default {
   async fetch(req: Request, env: Env): Promise<Response> {
-    const { pathname } = new URL(req.url);
+    const url = new URL(req.url);
+    const { pathname } = url;
+    if (url.hostname === "timis.tech" || url.hostname === "www.timis.tech") {
+      return Response.redirect(`https://agoro-portfolio.timis.tech${pathname}${url.search}`, 301);
+    }
     if (pathname === "/api/chat") {
       const origin = req.headers.get("origin") ?? "";
       const cors: Record<string, string> = ALLOWED.includes(origin)

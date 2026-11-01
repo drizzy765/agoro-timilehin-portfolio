@@ -2,7 +2,8 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   // Cloudflare Workers (free plan). URL: https://agoro-portfolio.timis.tech (also https://drizzy.agoro-timilehin.workers.dev)
   // Pages are a static Next.js export (out/) served by Workers Static Assets: no worker CPU per page.
-  // Only /api/* invokes worker/index.ts (the Groq chat, I/O-bound streaming).
+  // The worker runs first on every request but only does a host check (timis.tech/www -> agoro-portfolio.timis.tech)
+  // and /api/chat; everything else is passed straight to static assets (negligible CPU).
   "name": "drizzy",
   "main": "worker/index.ts",
   "compatibility_date": "2026-10-01",
@@ -15,7 +16,7 @@
     "binding": "ASSETS",
     "html_handling": "auto-trailing-slash",
     "not_found_handling": "404-page",
-    "run_worker_first": ["/api/*"]
+    "run_worker_first": true
   },
   // Secrets (not in this file): `printf '%s' "$GROQ_API_KEY" | npx wrangler secret put GROQ_API_KEY`
   // NEXT_PUBLIC_SITE_URL is inlined at BUILD time (npm run deploy sets it).
