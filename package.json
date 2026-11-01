@@ -9,10 +9,10 @@
     "lint": "eslint",
     "content": "node scripts/import-projects.mjs && node scripts/build-knowledge.mjs",
     "prebuild": "node scripts/build-knowledge.mjs",
-    "preview": "NEXT_PUBLIC_SITE_URL=${NEXT_PUBLIC_SITE_URL:-https://timis.tech} next build && wrangler dev --port 3210",
-    "deploy": "NEXT_PUBLIC_SITE_URL=${NEXT_PUBLIC_SITE_URL:-https://timis.tech} next build && wrangler deploy",
+    "preview": "NEXT_PUBLIC_SITE_URL=${NEXT_PUBLIC_SITE_URL:-https://agoro-portfolio.timis.tech} next build && wrangler dev --port 3210",
+    "deploy": "NEXT_PUBLIC_SITE_URL=${NEXT_PUBLIC_SITE_URL:-https://agoro-portfolio.timis.tech} next build && wrangler deploy",
     "cf-typegen": "wrangler types",
-    "build:pages": "PAGES_BASE_PATH=/portfolio NEXT_PUBLIC_SITE_URL=https://drizzy765.github.io/portfolio NEXT_PUBLIC_CHAT_API=https://timis.tech/api/chat next build && PAGES_BASE_PATH=/portfolio node scripts/pages-postprocess.mjs"
+    "build:pages": "PAGES_BASE_PATH=/portfolio NEXT_PUBLIC_SITE_URL=https://drizzy765.github.io/portfolio NEXT_PUBLIC_CHAT_API=https://agoro-portfolio.timis.tech/api/chat next build && PAGES_BASE_PATH=/portfolio node scripts/pages-postprocess.mjs"
   },
   "dependencies": {
     "@ai-sdk/react": "^4.0.145",
