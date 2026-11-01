@@ -1,8 +1,8 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  // Cloudflare Workers (free plan). URL: https://agoro-portfolio.timis.tech (also https://drizzy.agoro-timilehin.workers.dev)
+  // Cloudflare Workers (free plan). URL: https://timis.tech (also https://drizzy.agoro-timilehin.workers.dev)
   // Pages are a static Next.js export (out/) served by Workers Static Assets: no worker CPU per page.
-  // The worker runs first on every request but only does a host check (timis.tech/www -> agoro-portfolio.timis.tech)
+  // The worker runs first on every request but only does a host check (www.timis.tech -> timis.tech)
   // and /api/chat; everything else is passed straight to static assets (negligible CPU).
   "name": "drizzy",
   "main": "worker/index.ts",
