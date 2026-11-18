@@ -38,6 +38,7 @@ Generated ${new Date().toISOString().slice(0, 10)} from his CV, project READMEs,
 - Role: Machine Learning Engineer focused on speech & LLM systems, retrieval/recommendation, forecasting, responsible AI, data & digital products.
 - Interests: applying AI to public-sector, development, financial and emerging-market problems, with attention to reliability, inclusion, measurable evaluation and safe deployment.
 - Portfolio: https://timis.tech
+- Resume: available at https://timis.tech/Agoro_Oluwatimilehin_Resume.pdf
 - Contact: email agorotimilehin05@gmail.com · GitHub github.com/drizzy765 · LinkedIn linkedin.com/in/agoro-oluwatimilehin-aba2851aa · X @timilovesml1234 (x.com/timilovesml1234) · Medium medium.com/@agorotimilehin05
 
 ## Experience

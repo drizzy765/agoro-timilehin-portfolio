@@ -1,2 +1,6 @@
 /_next/static/*
   Cache-Control: public,max-age=31536000,immutable
+
+/Agoro_Oluwatimilehin_Resume.pdf
+  Content-Type: application/pdf
+  Content-Disposition: inline; filename="Agoro_Oluwatimilehin_Resume.pdf"

@@ -16,6 +16,7 @@ export const site = {
   x: "https://x.com/timilovesml1234",
   xHandle: "@timilovesml1234",
   medium: "https://medium.com/@agorotimilehin05",
+  resume: "/Agoro_Oluwatimilehin_Resume.pdf",
   spotifyEmbed: "https://open.spotify.com/embed/playlist/2OW9QUHQgwkYGj2bKKjHpH?theme=0",
   /**
    * Discord user ID for the Lanyard "now playing" card.
@@ -24,6 +25,9 @@ export const site = {
    */
   discordId: process.env.NEXT_PUBLIC_DISCORD_ID || "1070849770442203229",
 } as const;
+
+/** Public asset path that respects the GitHub Pages basePath (/portfolio) at build time. */
+export const resumeHref = `${process.env.NEXT_PUBLIC_BASE_PATH || ""}${site.resume}`;
 
 export type CategoryKey = "llm" | "rag" | "finance" | "climate" | "vision" | "data" | "devtools";
 

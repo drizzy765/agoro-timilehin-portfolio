@@ -2,6 +2,7 @@ import { Mail } from "lucide-react";
 import { site } from "@/content/site";
 import { GitHubIcon, LinkedInIcon, MediumIcon, XIcon } from "./brand-icons";
 import { CopyEmail } from "./copy-email";
+import { ResumeLink } from "./resume-link";
 
 const links = [
   { href: site.github, label: "GitHub", sub: "drizzy765", Icon: GitHubIcon },
@@ -24,6 +25,7 @@ export function Footer() {
                 <Mail className="size-4" /> {site.email}
               </a>
               <CopyEmail email={site.email} />
+              <ResumeLink className="px-5 py-3" label="Download CV" />
             </div>
           </div>
           <ul className="grid grid-cols-2 gap-2">

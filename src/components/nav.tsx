@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { motion } from "motion/react";
 import { useEffect, useState } from "react";
 import { BookOpen, Home, Mail, User } from "lucide-react";
+import { ResumeLink } from "./resume-link";
 import { cn } from "@/lib/utils";
 
 const tabs = [
@@ -77,15 +78,18 @@ export function Nav() {
             })}
           </ul>
 
-          <Magnetic>
-          <a
-            href="#contact"
-            className="inline-flex min-h-11 items-center gap-2 rounded-xl bg-lime px-4 text-sm font-medium text-on-accent transition hover:shadow-[0_0_24px_color-mix(in_srgb,var(--c-accent)_45%,transparent)] active:scale-[0.98]"
-          >
-            <Mail className="size-4" />
-            Contact
-          </a>
-          </Magnetic>
+          <div className="flex items-center gap-2">
+            <ResumeLink className="min-h-11 px-3 sm:px-4" />
+            <Magnetic>
+            <a
+              href="#contact"
+              className="inline-flex min-h-11 items-center gap-2 rounded-xl bg-lime px-4 text-sm font-medium text-on-accent transition hover:shadow-[0_0_24px_color-mix(in_srgb,var(--c-accent)_45%,transparent)] active:scale-[0.98]"
+            >
+              <Mail className="size-4" />
+              Contact
+            </a>
+            </Magnetic>
+          </div>
         </nav>
       </header>
 

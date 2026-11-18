@@ -5,6 +5,7 @@ import { site } from "@/content/site";
 import { DecryptedText } from "./decrypted-text";
 import { HeroSphere } from "./hero-sphere";
 import { OpenChatButton } from "./open-chat-button";
+import { ResumeLink } from "./resume-link";
 import { GitHubIcon, LinkedInIcon, MediumIcon, XIcon } from "./brand-icons";
 
 export function Hero() {
@@ -70,6 +71,7 @@ export function Hero() {
               <Sparkles className="size-4 text-magenta" />
               Ask my Agent
             </OpenChatButton>
+            <ResumeLink className="min-h-12 px-5" />
           </div>
           <div className="mt-8 flex items-center gap-1 text-subtle">
             {[
